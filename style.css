@@ -4,6 +4,7 @@
    ========================================================================== */
 :root {
   --bg: #120f43e8;
+  --bg-rgb: 18, 15, 67;
   --bg-raised: #0b1220;
   --bg-raised-2: #101a2e;
   --line: rgba(148, 178, 224, 0.14);
@@ -169,8 +170,8 @@ p { color: var(--text-muted); margin: 0 0 1em; }
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  opacity: 0.4;
-  filter: saturate(1.1) brightness(0.9);
+  opacity: 0.65;
+  filter: saturate(1.15) brightness(1);
 }
 #network-canvas {
   position: absolute;
@@ -185,7 +186,13 @@ p { color: var(--text-muted); margin: 0 0 1em; }
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse 60% 50% at 50% 40%, transparent 0%, var(--bg) 92%);
+  /* fades to a translucent tint (not a solid fill) so the video stays
+     visible through the vignette, right out to the hero's edges where it
+     blends into the solid page background below */
+  background: radial-gradient(ellipse 70% 60% at 50% 40%,
+    transparent 0%,
+    rgba(var(--bg-rgb), 0.35) 55%,
+    rgba(var(--bg-rgb), 0.92) 100%);
   z-index: 1;
   pointer-events: none;
 }
