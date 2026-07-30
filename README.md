@@ -1,44 +1,48 @@
-# ancy-tech-world.com
+# What changed
 
-Personal portfolio site for Ancy Mol KK — Magento 2 Developer / PHP Backend Developer / Laravel Developer.
+**1. Full Stack rebrand**
+- Title/meta, hero heading, hero role line, and About copy now lead with
+  "Full Stack Developer" instead of Magento-first branding.
+- Stack section reordered so **Frontend** comes first, section head renamed
+  "Every layer, one developer."
+- Magento 2, PHP, Laravel, MySQL are kept front and center as your real
+  specialization — nothing fabricated, just reframed as the full-stack
+  skillset it already is (frontend + backend + database + deployment).
 
-Files:
-- `index.html` — all page content
-- `style.css` — design, layout, responsive rules
-- `script.js` — animated background, scroll reveals, mobile nav
-- `CNAME` — tells GitHub Pages which custom domain to serve (already set to `ancy-tech-world.com`)
+**2. Hero background video**
+- Your uploaded video is now layered *behind* the existing particle-network
+  canvas in the hero (`assets/hero-bg.mp4`, poster frame at
+  `assets/hero-poster.jpg`), per your choice to keep both effects.
+- It's muted, autoplaying, loops, and is paused automatically when the hero
+  scrolls out of view or the visitor has "reduce motion" turned on — so it
+  never drags on load time or accessibility.
 
-## Host it free with your own domain (GitHub Pages)
+**3. Vintage script headings**
+- Every heading (`h1–h4`, section titles, card titles, nav logo) now uses
+  **Lobster**, a bold connected script in the spirit of the "Vintage" font
+  image you sent — the *exact* font in that image is a paid/branded stock
+  asset, not something safe to lift pixel-for-pixel, so Lobster is the
+  closest free Google Font with the same rounded, bold, retro-badge feel.
+- Large headings (hero, section titles) get a white fill + dark stroke +
+  drop shadow so they read like an inked badge, matching the reference
+  image's look. Smaller headings (card titles) use a lighter version of the
+  same treatment so body content stays readable.
+- If you own a license for the actual font in your reference image, tell me
+  its name (or send the `.woff2`/`.ttf` file) and I'll swap it in directly.
 
-**1. Push the code to GitHub**
-- Create a new repository, e.g. `ancy-tech-world` (can be public or private — Pages works on free plans either way for public repos).
-- Upload these 4 files to the repository root (or `git push` if using Git locally).
+# Files
+- `index.html` — page content
+- `style.css` — design tokens, layout, the new heading treatment, video layer
+- `script.js` — nav, scroll reveals, hero video playback, particle canvas
+- `assets/hero-bg.mp4`, `assets/hero-poster.jpg` — your uploaded video + its poster frame
+- `CNAME` — your GitHub Pages custom domain (`ancy-tech-world.com`)
 
-**2. Turn on GitHub Pages**
-- In the repo: **Settings → Pages**.
-- Under "Build and deployment", set **Source** to `Deploy from a branch`.
-- Branch: `main`, folder: `/ (root)`. Save.
-- GitHub will give you a URL like `https://<username>.github.io/ancy-tech-world` — check it loads before moving on.
+# Redeploying (same GitHub Pages setup as before)
+1. Push all files **including the `assets/` folder** to your repo root
+   (`git add . && git commit -m "Full stack rebrand + hero video + font" && git push`).
+2. GitHub Pages will rebuild automatically (Settings → Pages already points
+   at `main` / root from your original setup) — no new configuration needed.
+3. Give it a minute, then hard-refresh `ancy-tech-world.com` to see the update.
 
-**3. Point your domain at GitHub Pages**
-Go to wherever you bought `ancy-tech-world.com` (GoDaddy, Namecheap, etc.) and edit DNS records:
-
-| Type  | Host/Name | Value                  |
-|-------|-----------|-------------------------|
-| A     | @         | 185.199.108.153         |
-| A     | @         | 185.199.109.153         |
-| A     | @         | 185.199.110.153         |
-| A     | @         | 185.199.111.153         |
-| CNAME | www       | `<username>.github.io`  |
-
-(These are GitHub's official Pages IP addresses.)
-
-**4. Add the custom domain in GitHub**
-- Back in **Settings → Pages → Custom domain**, enter `ancy-tech-world.com` and save. (The `CNAME` file in this repo does this automatically once DNS is pointed correctly.)
-- Wait for DNS to propagate (10 minutes–a few hours).
-- Once it shows a green check, tick **Enforce HTTPS** so the site loads securely.
-
-That's it — no server, no hosting bill, and the domain is fully yours.
-
-## Editing content later
-All text lives directly in `index.html` (experience, projects, skills). Colors and fonts are defined as CSS variables at the top of `style.css` under `:root` if you want to adjust the palette.
+Note: the video adds ~2.8MB to your repo/page weight. If load time on mobile
+matters to you, I can compress it further or trim it to a shorter loop.

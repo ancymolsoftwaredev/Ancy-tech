@@ -23,21 +23,53 @@ const io = new IntersectionObserver((entries) => {
 revealEls.forEach(el => io.observe(el));
 
 // ---------------------------------------------------------------------------
+// Hero background video
+// Layered underneath the network canvas. Paused entirely for people who
+// prefer reduced motion, and paused/resumed as the hero scrolls in and out
+// of view so it isn't decoding frames the visitor can't see.
+// ---------------------------------------------------------------------------
+const heroVideo = document.getElementById('hero-video');
+const heroEl = document.getElementById('top');
+const prefersReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+function applyMotionPreference() {
+  if (!heroVideo) return;
+  if (prefersReducedMotionQuery.matches) {
+    heroVideo.pause();
+  } else {
+    heroVideo.play().catch(() => {}); // autoplay can be blocked before user interaction
+  }
+}
+applyMotionPreference();
+prefersReducedMotionQuery.addEventListener?.('change', applyMotionPreference);
+
+if (heroVideo && heroEl) {
+  const heroVisibility = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (prefersReducedMotionQuery.matches) return;
+      if (entry.isIntersecting) {
+        heroVideo.play().catch(() => {});
+      } else {
+        heroVideo.pause();
+      }
+    });
+  }, { threshold: 0 });
+  heroVisibility.observe(heroEl);
+}
+
+// ---------------------------------------------------------------------------
 // Hero network / circuit animation
 // ---------------------------------------------------------------------------
 const canvas = document.getElementById('network-canvas');
 const ctx = canvas.getContext('2d');
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
+const prefersReducedMotion = prefersReducedMotionQuery.matches;
 let W, H, nodes;
-
 function resize() {
   const hero = document.getElementById('top');
   W = canvas.width = hero.offsetWidth;
   H = canvas.height = hero.offsetHeight;
   initNodes();
 }
-
 function initNodes() {
   const count = Math.max(28, Math.floor((W * H) / 42000));
   nodes = Array.from({ length: count }, () => ({
@@ -48,14 +80,11 @@ function initNodes() {
     r: Math.random() * 1.6 + 0.6,
   }));
 }
-
 const LINK_DIST = 150;
 const BLUE = '53, 183, 255';
 const VIOLET = '138, 107, 255';
-
 function step() {
   ctx.clearRect(0, 0, W, H);
-
   // links
   for (let i = 0; i < nodes.length; i++) {
     for (let j = i + 1; j < nodes.length; j++) {
@@ -73,26 +102,22 @@ function step() {
       }
     }
   }
-
   // nodes
   nodes.forEach((n, idx) => {
     n.x += n.vx;
     n.y += n.vy;
     if (n.x < 0 || n.x > W) n.vx *= -1;
     if (n.y < 0 || n.y > H) n.vy *= -1;
-
     const color = idx % 5 === 0 ? VIOLET : BLUE;
     ctx.beginPath();
     ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
     ctx.fillStyle = `rgba(${color}, 0.85)`;
     ctx.fill();
   });
-
   if (!prefersReducedMotion) {
     requestAnimationFrame(step);
   }
 }
-
 resize();
 window.addEventListener('resize', () => {
   clearTimeout(window._resizeTimer);
