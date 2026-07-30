@@ -225,7 +225,7 @@ p { color: var(--text-muted); margin: 0 0 1em; }
   margin-bottom: 18px;
 }
 .hero h1 .accent {
-  background: var(--grad-signature);
+  background: var(--grad-signature: linear-gradient(135deg, #fff3cc 0%, #e6ca65 60%, #cca025 100%););
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
