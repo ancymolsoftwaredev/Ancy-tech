@@ -225,11 +225,11 @@ p { color: var(--text-muted); margin: 0 0 1em; }
   margin-bottom: 18px;
 }
 .hero h1 .accent {
-  background: var(--grad-signature: linear-gradient(135deg, #fff3cc 0%, #e6ca65 60%, #cca025 100%););
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  -webkit-text-stroke: 1.5px rgba(5,7,13,0.9);
+    background: darkgoldenrod;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #986b1d;
 }
 .hero-role {
   font-family: var(--font-mono);
