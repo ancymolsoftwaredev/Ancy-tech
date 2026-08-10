@@ -3,24 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ancy Mol KK </title>
-<meta name="description" content=" Full Stack Developer based in Dubai, UAE. 4+ years building complete web platforms end to end: frontend, PHP/Laravel backends, MySQL, and Magento 2 eCommerce.">
-<link rel="icon" href="data:,">
+<title>Ancy Mol KK — Full Stack Developer &amp; Marketplace Growth, Dubai</title>
+<meta name="description" content="Full Stack Developer in Dubai — Laravel, Next.js, WordPress, Shopify — plus Noon, Amazon.ae and Bayut marketplace listing management. Available for freelance work.">
+
+<link rel="icon" type="image/svg+xml" href="assets/logo-mark.svg">
+<link rel="apple-touch-icon" href="assets/logo-mark.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ancy Mol KK — Full Stack Developer & Marketplace Growth, Dubai">
+<meta property="og:description" content="Laravel, Next.js, WordPress and Shopify builds, plus Noon, Amazon.ae and Bayut marketplace growth. Open for freelance work.">
+<meta property="og:image" content="assets/logo-horizontal.svg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ancy Mol KK — Full Stack Developer, Dubai">
+<meta name="twitter:description" content="Laravel, Next.js, WordPress and Shopify builds, plus marketplace growth on Noon, Amazon.ae and Bayut.">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="nav" id="nav">
+<nav class="nav">
   <div class="wrap">
-    <a href="#top" class="logo">AncyMol KK </a>
+    <a href="#top" class="logo">
+      <img src="assets/logo-mark-transparent.svg" alt="" class="logo-mark">
+      <span>ancy<span class="p">@</span>dubai<span class="p">:~$</span></span>
+    </a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#stack">Stack</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
     </ul>
     <a href="#contact" class="nav-cta">Contact</a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
@@ -28,28 +42,30 @@
 </nav>
 
 <header class="hero" id="top">
-  <video
-    id="hero-video"
-    src="assets/hero-bg.mp4"
-    poster="assets/hero-poster.jpg"
-    autoplay muted loop playsinline
-    aria-hidden="true"></video>
-  <canvas id="network-canvas"></canvas>
-  <div class="hero-endpoints" aria-hidden="true">
-    <div class="endpoint"><span class="node"></span>DATABASE</div>
-    <div class="endpoint"><span class="node"></span>PAYMENT GATEWAY</div>
-    <div class="endpoint"><span class="node"></span>SHIPPING API</div>
-    <div class="endpoint"><span class="node"></span>EMAIL SERVICE</div>
-  </div>
   <div class="wrap">
-    <div class="hero-inner">
-      <div class="status-badge"><span class="dot"></span>AVAILABLE&nbsp;·&nbsp;DUBAI, UAE</div>
-      <h1> <br><span class="accent">full-stack platforms, end to end.</span></h1>
-      <div class="hero-role">FULL STACK DEVELOPER<span class="sep">/</span>PHP &amp; LARAVEL<span class="sep">/</span>MAGENTO 2</div>
-      <p class="lead">4+ years engineering complete web platforms — responsive frontends, PHP/Laravel backends, MySQL data layers and REST APIs — with deep specialization in enterprise Magento 2 eCommerce, for international clients.</p>
+    <div>
+      <div class="status"><span class="dot"></span>Open for freelance work</div>
+      <h1><span class="l1">Ancy Mol KK</span>Full stack builds. <span class="accent">Marketplaces that sell.</span></h1>
+      <p class="lead">I ship complete web platforms — Laravel and Next.js backends, WordPress and Shopify storefronts — and I run the commercial side too: Noon and Amazon.ae listings, sponsored ads, and Bayut property listings. One person, both ends of the funnel.</p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        <a href="#projects" class="btn btn-primary">View Work ↗</a>
+        <a href="#contact" class="btn btn-ghost">Start a Project</a>
+      </div>
+    </div>
+    <div>
+      <div class="terminal">
+        <div class="term-bar"><span></span><span></span><span></span><div class="title">zsh — ancy-portfolio</div></div>
+        <div class="term-body" id="termBody"></div>
+      </div>
+      <div class="ledger">
+        <div class="lhead"><span>Skill Sheet</span><span>Dubai, UAE</span></div>
+        <div class="lrow"><span>Laravel / PHP</span><span class="ltag">4+ yrs</span></div>
+        <div class="lrow"><span>Next.js</span><span class="ltag">current</span></div>
+        <div class="lrow"><span>WordPress / WooCommerce</span><span class="ltag">solo builds</span></div>
+        <div class="lrow"><span>Shopify</span><span class="ltag">current</span></div>
+        <div class="lrow"><span>Noon UAE / Amazon.ae</span><span class="ltag">listings + ads</span></div>
+        <div class="lrow"><span>Bayut</span><span class="ltag">listings</span></div>
+        <div class="ltot"><span>Available for</span><span>Freelance</span></div>
       </div>
     </div>
   </div>
@@ -62,18 +78,54 @@
       <div class="about-grid reveal">
         <div>
           <div class="eyebrow">About</div>
-          <p class="lede">I'm a full stack software engineer based in Dubai — comfortable across the frontend, backend, database and deployment layers, with deep specialization in Magento 2 and PHP.</p>
-          <p>Over the past four years I've delivered scalable web applications for international clients — building responsive frontends, custom Magento modules, inventory management systems and CRM platforms, optimizing performance, resolving production issues, and supporting multi-store eCommerce environments across real estate, retail, and herbal wellness industries. My stack spans PHP, Laravel, Yii Framework, MySQL, JavaScript and third-party API integrations.</p>
-          <p>Currently based in Dubai with UAE work experience</p>
+          <p><strong>I'm a full stack developer based in Dubai</strong>, currently building and maintaining production platforms at United Arab Agencies — including the Laravel rebuild of <a href="https://uaa.ae/" target="_blank" rel="noopener" style="color:var(--teal);text-decoration:none;">uaa.ae</a>.</p>
+          <p>Alongside development, I run the commercial side of two channels myself: creating and advertising product listings on Noon UAE and Amazon.ae, and managing Bayut property listings and Google Ads for residential and commercial real estate in Deira. I also independently built and run Baniyas Oasis Electronics, a WordPress/WooCommerce store, end to end.</p>
+          <p>That combination — shipping the code and running the storefront — is what I bring to freelance projects: sites that are built well <em>and</em> set up to convert.</p>
         </div>
         <ul class="fact-list">
-          <li><span class="k">LOCATION</span><span class="v">Dubai, UAE</span></li>
-          <li><span class="k">EXPERIENCE</span><span class="v">4+ years</span></li>
-          <!-- <li><span class="k">NOTICE PERIOD</span><span class="v">Immediate Joiner</span></li> -->
-          <!-- <li><span class="k">VISA STATUS</span><span class="v">UAE </span></li> -->
-          <li><span class="k">LANGUAGES</span><span class="v">English, Malayalam, Tamil, Hindi, Arabic</span></li>
-          <li><span class="k">LINKEDIN</span><span class="v"><a href="https://www.linkedin.com/in/ancy-mol-31ba11220" target="_blank" rel="noopener">ancy-mol-31ba11220 ↗</a></span></li>
+          <li><span class="k">Location</span><span class="v">Dubai, UAE</span></li>
+          <li><span class="k">Current Role</span><span class="v">Full Stack / Ecommerce Backend Developer, United Arab Agencies</span></li>
+          <li><span class="k">Core Stack</span><span class="v">Laravel · Next.js · WordPress · Shopify</span></li>
+          <li><span class="k">Marketplaces</span><span class="v">Noon UAE · Amazon.ae · Bayut</span></li>
+          <li><span class="k">Languages</span><span class="v">English, Malayalam, Tamil, Hindi, Arabic</span></li>
+          <li><span class="k">LinkedIn</span><span class="v"><a href="https://www.linkedin.com/in/ancy-mol-31ba11220" target="_blank" rel="noopener">ancy-mol-31ba11220 ↗</a></span></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">Freelance Services</div>
+        <h2>What I take on</h2>
+        <p>Four areas, one developer — pick one or combine them for a project that's built and launched properly.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc-card reveal">
+          <div class="num">01</div>
+          <h3>Web App Development</h3>
+          <p>Custom platforms and admin tools built on Laravel or Next.js, with clean data layers and REST APIs.</p>
+          <div class="tags"><span>Laravel</span><span>Next.js</span><span>MySQL</span><span>REST API</span></div>
+        </div>
+        <div class="svc-card reveal">
+          <div class="num">02</div>
+          <h3>eCommerce Builds</h3>
+          <p>Full storefronts on WordPress/WooCommerce or Shopify — catalog, payments, and checkout, set up solo end to end.</p>
+          <div class="tags"><span>WordPress</span><span>WooCommerce</span><span>Shopify</span><span>Stripe</span></div>
+        </div>
+        <div class="svc-card reveal">
+          <div class="num">03</div>
+          <h3>Marketplace Growth</h3>
+          <p>Listing creation and sponsored ad campaigns on Noon UAE and Amazon.ae — built to be found, not just published.</p>
+          <div class="tags"><span>Noon Sponsored Products</span><span>Amazon Ads</span><span>Listing SEO</span></div>
+        </div>
+        <div class="svc-card reveal">
+          <div class="num">04</div>
+          <h3>Real Estate Marketing</h3>
+          <p>Bayut listings, Google Ads campaigns and landing pages for residential and commercial property.</p>
+          <div class="tags"><span>Bayut</span><span>Google Ads</span><span>Landing Pages</span></div>
+        </div>
       </div>
     </div>
   </section>
@@ -83,46 +135,33 @@
       <div class="section-head reveal">
         <div class="eyebrow">Stack</div>
         <h2>Every layer, one developer</h2>
-        <p>From the storefront a customer clicks through, to the database and payment gateway underneath — the full stack I use to ship and support real platforms.</p>
+        <p>From the storefront a customer clicks through, to the database and payment gateway underneath.</p>
       </div>
       <div class="stack-grid">
-
         <div class="stack-card reveal">
-          <div class="icon">▤</div>
-          <h3>Frontend</h3>
-          <div class="tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>jQuery</span><span>AJAX</span><span>Bootstrap</span></div>
+          <h4>Frontend</h4>
+          <div class="tags"><span>Next.js</span><span>React</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div>
         </div>
-
         <div class="stack-card reveal">
-          <div class="icon">⌘</div>
-          <h3>Backend &amp; Frameworks</h3>
-          <div class="tags"><span>PHP</span><span>Laravel</span><span>Yii Framework</span><span>REST API</span><span>MVC</span><span>OOP</span><span>Composer</span></div>
+          <h4>Backend &amp; Frameworks</h4>
+          <div class="tags"><span>PHP</span><span>Laravel</span><span>Yii Framework</span><span>REST API</span><span>MVC</span></div>
         </div>
-
         <div class="stack-card reveal">
-          <div class="icon">◧</div>
-          <h3>CMS &amp; eCommerce</h3>
-          <div class="tags"><span>Magento 2</span><span>WordPress</span><span>Multi-Store</span><span>Catalog Mgmt</span><span>Order Mgmt</span><span>Inventory</span></div>
+          <h4>CMS &amp; eCommerce</h4>
+          <div class="tags"><span>WordPress</span><span>WooCommerce</span><span>Shopify</span><span>Magento 2</span></div>
         </div>
-
         <div class="stack-card reveal">
-          <div class="icon">▦</div>
-          <h3>Database</h3>
-          <div class="tags"><span>MySQL</span><span>SQL</span><span>Oracle</span><span>DB Design</span><span>Optimization</span></div>
+          <h4>Database</h4>
+          <div class="tags"><span>MySQL</span><span>SQL</span><span>DB Design</span><span>Optimization</span></div>
         </div>
-
         <div class="stack-card reveal">
-          <div class="icon">◈</div>
-          <h3>Payments &amp; Integrations</h3>
-          <div class="tags"><span>Stripe</span><span>PayTabs</span><span>Tabby / Tamara</span><span>Payment Gateways</span><span>3rd-Party APIs</span></div>
+          <h4>Marketplaces &amp; Listings</h4>
+          <div class="tags"><span>Noon Seller Center</span><span>Amazon Seller Central</span><span>Bayut</span><span>Google Ads</span></div>
         </div>
-
         <div class="stack-card reveal">
-          <div class="icon">⌬</div>
-          <h3>Tools &amp; Practices</h3>
-          <div class="tags"><span>Git</span><span>Jira</span><span>Azure</span><span>Linux</span><span>Apache</span><span>Postman</span><span>cPanel</span><span>GoDaddy</span><span>Agile</span></div>
+          <h4>Tools &amp; Practices</h4>
+          <div class="tags"><span>Git</span><span>Jira</span><span>Linux</span><span>cPanel</span><span>Agile</span></div>
         </div>
-
       </div>
     </div>
   </section>
@@ -131,58 +170,38 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Experience</div>
-        <h2>Four years, four teams, one focus</h2>
-        <p>Building and supporting production eCommerce and CRM platforms end to end.</p>
+        <h2>Development and commercial ops, side by side</h2>
       </div>
-
       <div class="timeline">
-
-        <div class="timeline-item current reveal">
-          <div class="timeline-meta"><span class="pill">CURRENT</span>Jan 2026 – Present</div>
+        <div class="t-item current reveal">
+          <div class="t-meta"><span class="pill">Current</span>Jan 2026 – Present</div>
           <h3>Full Stack / Ecommerce Backend Developer</h3>
           <span class="co">United Arab Agencies · Dubai, UAE</span>
           <ul>
-            <li>Developed and deployed a custom Inventory Management System using the Yii Framework, automating inventory operations, product management, invoicing, stock returns and transaction tracking.</li>
-            <li>Built and maintained the iPure Herbs eCommerce website, managing product catalog, order processing, customer experience and online business operations.</li>
-            <li>Provided ongoing technical support, troubleshooting, system enhancements and user training across both platforms.</li>
+            <li>Rebuilt the uaa.ae website on Laravel.</li>
+            <li>Manage Noon UAE and Amazon.ae product listings and sponsored advertising.</li>
+            <li>Handle Bayut listings and Google Ads for residential and commercial properties in Deira.</li>
           </ul>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-meta">Dec 2023 – Sep 2025</div>
+        <div class="t-item reveal">
+          <div class="t-meta">Dec 2023 – Sep 2025</div>
           <h3>Software Engineer L2</h3>
           <span class="co">Zerone Consultancy · Infopark, India</span>
           <ul>
-            <li>Developed and maintained enterprise Magento 2 eCommerce platforms serving international clients.</li>
-            <li>Built custom Magento 2 modules for booking systems, product lifecycle management and event scheduling.</li>
-            <li>Integrated third-party REST APIs to automate business processes and improve operational efficiency.</li>
-            <li>Performed Magento version upgrades, bug fixing and production issue resolution.</li>
+            <li>Developed and maintained enterprise Magento 2 eCommerce platforms for international clients.</li>
+            <li>Built custom Magento 2 modules for booking systems and product lifecycle management.</li>
             <li>Contributed to PropTech architecture supporting 64+ real estate business websites.</li>
           </ul>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-meta">Aug 2022 – Nov 2023</div>
+        <div class="t-item reveal">
+          <div class="t-meta">Aug 2022 – Nov 2023</div>
           <h3>Junior Software Engineer</h3>
           <span class="co">Accuron Technologies · Infopark, India</span>
           <ul>
             <li>Developed CRM applications for real estate and distribution businesses.</li>
-            <li>Created backend modules for inventory tracking, product workflows and data processing.</li>
-            <li>Built features for the Vango B2B distribution management platform.</li>
-            <li>Implemented CRUD systems and secure Role-Based Access Control (RBAC) frameworks.</li>
+            <li>Implemented CRUD systems and role-based access control frameworks.</li>
           </ul>
         </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-meta">Nov 2020 – Apr 2022</div>
-          <h3>Chegg Expert Tutor</h3>
-          <span class="co">Chegg · Remote, India</span>
-          <ul>
-            <li>Delivered academic tutoring in algorithms, databases and programming fundamentals to university-level students.</li>
-            <li>Improved student comprehension through structured, step-by-step problem-solving guidance.</li>
-          </ul>
-        </div>
-
       </div>
     </div>
   </section>
@@ -192,101 +211,48 @@
       <div class="section-head reveal">
         <div class="eyebrow">Projects</div>
         <h2>Platforms I've built and kept running</h2>
-        <p>A selection of the full-stack, eCommerce and real-estate platforms I've worked on — spanning 8 major projects.</p>
       </div>
-      <div class="project-grid">
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div><span class="tag">Full Build · Full Stack</span><h3>iPure Herbs</h3></div>
-            <a href="https://ipureherbs.org/" target="_blank" rel="noopener" class="visit">Visit ↗</a>
-          </div>
-          <p>Herbal supplements eCommerce platform built on Laravel 12 and Next.js 15, with a Filament PHP admin panel. Owned end-to-end: catalog, orders, customer experience and business operations.</p>
-          <div class="stack-line">Laravel 12 · Next.js 15 · MySQL · Redis · Meilisearch · Stripe · PayTabs · Tabby/Tamara · Aramex/DHL · Klaviyo</div>
+      <div class="proj-grid">
+        <div class="proj-card reveal">
+          <div class="proj-top"><div><span class="tag">Laravel Rebuild</span><h3>United Arab Agencies</h3></div><a href="https://uaa.ae/" target="_blank" rel="noopener" class="visit">Visit ↗</a></div>
+          <p>Rebuilt the company website on Laravel — real estate agency operating in Dubai since 1964.</p>
+          <div class="stack-line">Laravel · MySQL</div>
         </div>
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div><span class="tag">Backend Lead</span><h3>Acer Australia</h3></div>
-            <a href="https://www.acer.com/au-en" target="_blank" rel="noopener" class="visit">Visit ↗</a>
-          </div>
-          <p>Enterprise Magento 2 platform. Main backend lead handling production support, version upgrades, custom module development, API integration and performance optimization.</p>
-          <div class="stack-line">Magento 2 · REST API · MySQL · Performance Tuning</div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div><span class="tag">PropTech</span><h3>Proxima</h3></div>
-            <a href="https://www.proxima.com.au/" target="_blank" rel="noopener" class="visit">Visit ↗</a>
-          </div>
-          <p>Real estate reservation platform across Australia and Indonesia — 64+ sub-websites, 9 delivered with distinct themes for multiple agencies. Mobile app API, chatbot and email automation, commission system, property catalog and sales reporting.</p>
-          <div class="stack-line">Magento 2 · Mobile API · Multi-Store · Chatbot · Commission Engine</div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div><span class="tag">Ecommerce</span><h3>Caravel Qatar</h3></div>
-            <a href="https://www.caravel.qa/products" target="_blank" rel="noopener" class="visit">Visit ↗</a>
-          </div>
-          <p>Enterprise eCommerce product catalog and storefront, part of the broader portfolio of large-scale Magento platforms delivered for international clients.</p>
-          <div class="stack-line">Magento 2 · Catalog Management</div>
-        </div>
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div><span class="tag">WordPress · Solo Build</span><h3>Baniyas Oasis Electronics</h3></div>
-            <a href="https://baniyasoasiselectronics.com/" target="_blank" rel="noopener" class="visit">Visit ↗</a>
-          </div>
-          <p>Full eCommerce build delivered independently end-to-end on WordPress, including Stripe payment integration, product catalog and storefront setup.</p>
+        <div class="proj-card reveal">
+          <div class="proj-top"><div><span class="tag">WordPress · Solo Build</span><h3>Baniyas Oasis Electronics</h3></div><a href="https://baniyasoasiselectronics.com/" target="_blank" rel="noopener" class="visit">Visit ↗</a></div>
+          <p>Full eCommerce build delivered independently end to end, including Stripe payment integration and catalog setup.</p>
           <div class="stack-line">WordPress · WooCommerce · Stripe</div>
         </div>
-
-        <div class="project-card reveal">
-          <div class="project-top">
-            <div><span class="tag">Production Support</span><h3>Foxtel</h3></div>
-          </div>
-          <p>Enterprise Magento platform — production support, bug fixing, backend enhancements and database optimization for a large media and entertainment client.</p>
-          <div class="stack-line">Magento 2 · Database Optimization</div>
+        <div class="proj-card reveal">
+          <div class="proj-top"><div><span class="tag">Full Build · Full Stack</span><h3>iPure Herbs</h3></div><a href="https://ipureherbs.org/" target="_blank" rel="noopener" class="visit">Visit ↗</a></div>
+          <p>Herbal supplements eCommerce platform on Laravel 12 and Next.js 15, owned end to end: catalog, orders, and operations.</p>
+          <div class="stack-line">Laravel 12 · Next.js 15 · MySQL · Stripe</div>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="education">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <div class="eyebrow">Education &amp; Certifications</div>
-        <h2>Foundations</h2>
-      </div>
-      <div class="split-grid">
-        <div class="info-card reveal">
-          <h3>Education</h3>
-          <div class="row"><span>Bachelor of Science, Computer Science</span><span>2022</span></div>
-          <div class="row"><span>MG University, Kerala, India</span><span></span></div>
+        <div class="proj-card reveal">
+          <div class="proj-top"><div><span class="tag">Backend Lead</span><h3>Acer Australia</h3></div><a href="https://www.acer.com/au-en" target="_blank" rel="noopener" class="visit">Visit ↗</a></div>
+          <p>Enterprise Magento 2 platform — production support, module development, and performance optimization.</p>
+          <div class="stack-line">Magento 2 · REST API · MySQL</div>
         </div>
-        <div class="info-card reveal">
-          <h3>Certifications</h3>
-          <div class="row"><span>Data Structures &amp; Algorithms</span><span>✓</span></div>
-          <div class="row"><span>Big Data and MySQL Database Systems</span><span>✓</span></div>
+        <div class="proj-card reveal">
+          <div class="proj-top"><div><span class="tag">PropTech</span><h3>Proxima</h3></div><a href="https://www.proxima.com.au/" target="_blank" rel="noopener" class="visit">Visit ↗</a></div>
+          <p>Real estate reservation platform across Australia and Indonesia — 64+ sub-websites, commission system, and property catalog.</p>
+          <div class="stack-line">Magento 2 · Mobile API · Multi-Store</div>
         </div>
-      </div>
-      <br>
-      <div class="info-card reveal">
-        <h3>Languages</h3>
-        <div class="lang-chips">
-          <span>English</span><span>Malayalam (Native)</span><span>Tamil</span><span>Hindi</span><span>Arabic</span>
+        <div class="proj-card reveal">
+          <div class="proj-top"><div><span class="tag">Ecommerce</span><h3>Caravel Qatar</h3></div><a href="https://www.caravel.qa/products" target="_blank" rel="noopener" class="visit">Visit ↗</a></div>
+          <p>Enterprise eCommerce product catalog and storefront for an international retail client.</p>
+          <div class="stack-line">Magento 2 · Catalog Management</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact">
+  <section id="contact" style="border-bottom:none;">
     <div class="wrap">
       <div class="contact-panel reveal">
         <div class="eyebrow" style="justify-content:center;">Contact</div>
-        <h2>Let's build something reliable.</h2>
-        <p>Immediately available and open to Full Stack, PHP/Laravel or Magento 2 backend roles in Dubai and beyond.</p>
+        <h2>Have a build in mind?</h2>
+        <p>Open to freelance and contract work — Laravel, Next.js, WordPress or Shopify builds, and Noon/Amazon/Bayut listing growth.</p>
         <div class="contact-links">
           <a href="mailto:ancymol.softwaredev@gmail.com" class="btn btn-primary">Email Me</a>
           <a href="tel:+971561835793" class="btn btn-ghost">+971 56 183 5793</a>
@@ -300,8 +266,8 @@
 
 <footer>
   <div class="wrap">
-    <p>© 2026 Ancy Mol KK. Built and maintained by Ancy.</p>
-    <div class="foot-links">
+    <p class="foot-brand"><img src="assets/logo-mark-transparent.svg" alt="" class="logo-mark small">© 2026 Ancy Mol KK</p>
+    <div>
       <a href="mailto:ancymol.softwaredev@gmail.com">Email</a>
       <a href="https://www.linkedin.com/in/ancy-mol-31ba11220" target="_blank" rel="noopener">LinkedIn</a>
     </div>
