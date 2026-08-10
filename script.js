@@ -1,130 +1,61 @@
-// ---------------------------------------------------------------------------
-// Mobile nav toggle
-// ---------------------------------------------------------------------------
-const nav = document.getElementById('nav');
-const navToggle = document.getElementById('navToggle');
-navToggle?.addEventListener('click', () => nav.classList.toggle('open'));
-document.querySelectorAll('.nav-links a').forEach(a =>
-  a.addEventListener('click', () => nav.classList.remove('open'))
-);
-
-// ---------------------------------------------------------------------------
 // Scroll reveal
-// ---------------------------------------------------------------------------
 const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      io.unobserve(entry.target);
-    }
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+},{threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
+
+// Mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.querySelector('.nav-links');
+if(navToggle){
+  navToggle.addEventListener('click', ()=>{
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    navLinks.style.flexDirection = 'column';
+    navLinks.style.position = 'absolute';
+    navLinks.style.top = '64px';
+    navLinks.style.right = '20px';
+    navLinks.style.background = '#15181C';
+    navLinks.style.padding = '16px 20px';
+    navLinks.style.border = '1px solid rgba(241,238,230,0.12)';
   });
-}, { threshold: 0.12 });
-revealEls.forEach(el => io.observe(el));
-
-// ---------------------------------------------------------------------------
-// Hero background video
-// Layered underneath the network canvas. Paused entirely for people who
-// prefer reduced motion, and paused/resumed as the hero scrolls in and out
-// of view so it isn't decoding frames the visitor can't see.
-// ---------------------------------------------------------------------------
-const heroVideo = document.getElementById('hero-video');
-const heroEl = document.getElementById('top');
-const prefersReducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-function applyMotionPreference() {
-  if (!heroVideo) return;
-  if (prefersReducedMotionQuery.matches) {
-    heroVideo.pause();
-  } else {
-    heroVideo.play().catch(() => {}); // autoplay can be blocked before user interaction
-  }
 }
-applyMotionPreference();
-prefersReducedMotionQuery.addEventListener?.('change', applyMotionPreference);
 
-if (heroVideo && heroEl) {
-  const heroVisibility = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (prefersReducedMotionQuery.matches) return;
-      if (entry.isIntersecting) {
-        heroVideo.play().catch(() => {});
-      } else {
-        heroVideo.pause();
+// Terminal typing sequence
+const lines = [
+  { cmd: 'deploy uaa.ae --stack=laravel', out: 'rebuilt & shipped ✓  united arab agencies' },
+  { cmd: 'optimize noon-listing --ads=sponsored', out: 'ctr +  visibility improved across catalog' },
+  { cmd: 'sync bayut-listings --status=live', out: 'residential & commercial listings synced' },
+  { cmd: 'init project --stack=next.js,laravel', out: 'ready for freelance work ✓' }
+];
+
+const body = document.getElementById('termBody');
+if(body){
+  let li = 0;
+  function typeLine(){
+    if(li >= lines.length){ li = 0; }
+    const { cmd, out } = lines[li];
+    const row = document.createElement('div');
+    row.className = 'row';
+    row.innerHTML = '<span class="prompt">ancy@dubai:~$</span><span class="typed"></span><span class="caret"></span>';
+    body.appendChild(row);
+    const typedEl = row.querySelector('.typed');
+    let ci = 0;
+    const typeChar = setInterval(()=>{
+      typedEl.textContent += cmd[ci];
+      ci++;
+      if(ci >= cmd.length){
+        clearInterval(typeChar);
+        row.querySelector('.caret').remove();
+        const outEl = document.createElement('div');
+        outEl.className = 'out';
+        outEl.textContent = out;
+        body.appendChild(outEl);
+        while(body.children.length > 8){ body.removeChild(body.firstChild); }
+        li++;
+        setTimeout(typeLine, 1400);
       }
-    });
-  }, { threshold: 0 });
-  heroVisibility.observe(heroEl);
-}
-
-// ---------------------------------------------------------------------------
-// Hero network / circuit animation
-// ---------------------------------------------------------------------------
-const canvas = document.getElementById('network-canvas');
-const ctx = canvas.getContext('2d');
-const prefersReducedMotion = prefersReducedMotionQuery.matches;
-let W, H, nodes;
-function resize() {
-  const hero = document.getElementById('top');
-  W = canvas.width = hero.offsetWidth;
-  H = canvas.height = hero.offsetHeight;
-  initNodes();
-}
-function initNodes() {
-  const count = Math.max(28, Math.floor((W * H) / 42000));
-  nodes = Array.from({ length: count }, () => ({
-    x: Math.random() * W,
-    y: Math.random() * H,
-    vx: (Math.random() - 0.5) * 0.25,
-    vy: (Math.random() - 0.5) * 0.25,
-    r: Math.random() * 1.6 + 0.6,
-  }));
-}
-const LINK_DIST = 150;
-const BLUE = '53, 183, 255';
-const VIOLET = '138, 107, 255';
-function step() {
-  ctx.clearRect(0, 0, W, H);
-  // links
-  for (let i = 0; i < nodes.length; i++) {
-    for (let j = i + 1; j < nodes.length; j++) {
-      const a = nodes[i], b = nodes[j];
-      const dx = a.x - b.x, dy = a.y - b.y;
-      const dist = Math.sqrt(dx * dx + dy * dy);
-      if (dist < LINK_DIST) {
-        const alpha = (1 - dist / LINK_DIST) * 0.35;
-        ctx.strokeStyle = `rgba(${BLUE}, ${alpha})`;
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-        ctx.stroke();
-      }
-    }
+    }, 32);
   }
-  // nodes
-  nodes.forEach((n, idx) => {
-    n.x += n.vx;
-    n.y += n.vy;
-    if (n.x < 0 || n.x > W) n.vx *= -1;
-    if (n.y < 0 || n.y > H) n.vy *= -1;
-    const color = idx % 5 === 0 ? VIOLET : BLUE;
-    ctx.beginPath();
-    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(${color}, 0.85)`;
-    ctx.fill();
-  });
-  if (!prefersReducedMotion) {
-    requestAnimationFrame(step);
-  }
-}
-resize();
-window.addEventListener('resize', () => {
-  clearTimeout(window._resizeTimer);
-  window._resizeTimer = setTimeout(resize, 150);
-});
-step();
-if (prefersReducedMotion) {
-  // draw a single static frame instead of animating
-  step();
+  typeLine();
 }
