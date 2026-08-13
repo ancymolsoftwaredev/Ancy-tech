@@ -1,7 +1,0 @@
-<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-  <!-- Monogram: terminal caret legs + ledger-dashed crossbar + status-dot apex -->
-  <path d="M60 18 L20 102" fill="none" stroke="#F1EEE6" stroke-width="8" stroke-linecap="round"/>
-  <path d="M60 18 L100 102" fill="none" stroke="#F1EEE6" stroke-width="8" stroke-linecap="round"/>
-  <line x1="35" y1="70" x2="85" y2="70" stroke="#C08A2E" stroke-width="6" stroke-linecap="round" stroke-dasharray="0.1 12"/>
-  <circle cx="60" cy="16" r="7" fill="#3FBFAE"/>
-</svg>
