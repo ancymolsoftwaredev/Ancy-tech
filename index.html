@@ -7,8 +7,8 @@
 <meta name="description" content="Ancymol KK — Full Stack Developer in Dubai. Ecommerce (Magento 2, Laravel, Next.js) and AI / WhatsApp automation for real estate and retail. Available to join immediately.">
 <meta property="og:title" content="Ancymol KK — Full Stack & Automation Developer, Dubai">
 <meta property="og:description" content="I build ecommerce platforms and automations that turn leads into customers.">
-<meta property="og:image" content="assets/ancymol-photo.webp">
-<link rel="icon" href="assets/ancymol-photo.webp">
+<meta property="og:image" content="assets/ancymol.webp">
+<link rel="icon" href="assets/ancymol.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
@@ -62,16 +62,16 @@ h1 em{font-style:normal;background:linear-gradient(120deg,var(--gold2),var(--gol
 .meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;color:var(--muted);font-size:14px}
 .meta span{display:flex;align-items:center;gap:7px}
 
-.portrait{position:relative;justify-self:center;width:min(330px,100%);aspect-ratio:266/480}
-.portrait .ring{position:absolute;inset:-12px;border-radius:34px;background:linear-gradient(160deg,var(--gold2),rgba(232,180,74,.15) 35%,rgba(232,180,74,.15) 65%,var(--gold));box-shadow:0 0 70px rgba(232,180,74,.22)}
-.portrait .ring::after{content:"";position:absolute;inset:2px;border-radius:32px;background:var(--bg)}
+.portrait{position:relative;justify-self:center;width:min(420px,100%);aspect-ratio:1}
+.portrait .ring{position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 0deg,var(--gold),transparent 30%,var(--gold2) 50%,transparent 75%,var(--gold));animation:spin 12s linear infinite;filter:blur(.5px)}
+.portrait .ring::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--bg)}
 @keyframes spin{to{transform:rotate(360deg)}}
-.portrait img{position:relative;width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:24px;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(232,180,74,.18)}
+.portrait img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(232,180,74,.18)}
 .chip{position:absolute;background:rgba(23,20,15,.92);border:1px solid var(--line);backdrop-filter:blur(8px);border-radius:14px;padding:10px 14px;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.5);animation:float 5s ease-in-out infinite;white-space:nowrap}
 .chip b{display:block;color:var(--gold);font-size:18px;line-height:1.1}
-.chip.c1{top:8%;left:-22%}
-.chip.c2{bottom:10%;left:-24%;animation-delay:1.2s}
-.chip.c3{top:44%;right:-24%;animation-delay:2.4s}
+.chip.c1{top:6%;left:-12%}
+.chip.c2{bottom:12%;left:-16%;animation-delay:1.2s}
+.chip.c3{top:42%;right:-14%;animation-delay:2.4s}
 @keyframes float{50%{transform:translateY(-10px)}}
 
 /* stats */
@@ -182,7 +182,7 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
 /* responsive */
 @media (max-width:980px){
   .hero-grid,.spot{grid-template-columns:1fr}
-  .portrait{order:-1;width:min(250px,64vw);margin-top:14px}
+  .portrait{order:-1;width:min(300px,78vw);margin-top:10px}
   .chip.c1{left:-6%}.chip.c2{left:-8%}.chip.c3{right:-6%}
   .grid{grid-template-columns:1fr 1fr}
   .card.wide{grid-column:span 2}
@@ -242,7 +242,7 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
     </div>
     <div class="portrait">
       <div class="ring"></div>
-      <img src="assets/ancymol-photo.webp" alt="Ancymol KK, Full Stack Developer" width="532" height="960">
+      <img src="assets/ancymol.webp" alt="Ancymol KK, Full Stack Developer" width="420" height="420">
       <div class="chip c1"><b>4+ yrs</b>Full stack</div>
       <div class="chip c2"><b>64+</b>real-estate sites</div>
       <div class="chip c3"><b>24/7</b>lead replies</div>
