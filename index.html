@@ -1,717 +1,546 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ancy Mol KK — Full-Stack Engineer, Dubai</title>
-<meta name="description" content="Full-stack engineer in Dubai — Laravel, Next.js, WordPress, Shopify — plus WhatsApp & AI-voice automation and Noon, Amazon.ae, Bayut marketplace growth. Open for freelance work.">
-<meta name="author" content="Ancy Mol KK">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='1' y='1' width='30' height='30' rx='8' fill='%2308110F'/%3E%3Cpath d='M9 22 L16 9 L23 22' stroke='%23E6A95C' stroke-width='2.6' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M12.2 17 H19.8' stroke='%2345C6B4' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ancy Mol KK — Full-Stack Engineer, Dubai">
-<meta property="og:description" content="I build the product and run the storefront — Laravel/Next.js platforms, WordPress/Shopify stores, WhatsApp automation, and marketplace growth.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ancymol KK — Full Stack & Automation Developer</title>
+<meta name="description" content="Ancymol KK — Full Stack Developer in Dubai. Ecommerce (Magento 2, Laravel, Next.js) and AI / WhatsApp automation for real estate and retail. Available to join immediately.">
+<meta property="og:title" content="Ancymol KK — Full Stack & Automation Developer, Dubai">
+<meta property="og:description" content="I build ecommerce platforms and automations that turn leads into customers.">
+<meta property="og:image" content="assets/ancymol.webp">
+<link rel="icon" href="assets/ancymol.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0a08; --bg2:#12100c; --card:#17140f; --line:#2a241a;
+  --gold:#e8b44a; --gold2:#ffd27a; --goldDim:#8a6a2a;
+  --text:#f3ede2; --muted:#a89f8f; --green:#25d366;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.gold{color:var(--gold)}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto 0;z-index:50;backdrop-filter:blur(12px);background:rgba(11,10,8,.72);border-bottom:1px solid rgba(232,180,74,.12)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:700}
+.logo span{color:var(--gold)}
+.links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+.links a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:14px;transition:.25s;border:1px solid transparent;cursor:pointer}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1306;box-shadow:0 8px 30px rgba(232,180,74,.25)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(232,180,74,.4)}
+.btn-ghost{border-color:var(--goldDim);color:var(--text)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.nav-cta{padding:9px 18px}
+
+/* hero */
+.hero{overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:110px 0 60px;position:relative;
+  background:radial-gradient(900px 600px at 78% 40%,rgba(232,180,74,.13),transparent 60%),radial-gradient(600px 400px at 10% 90%,rgba(232,180,74,.06),transparent 60%)}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(232,180,74,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(232,180,74,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative}
+.badge{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;border:1px solid rgba(37,211,102,.35);background:rgba(37,211,102,.08);border-radius:999px;font-size:13px;color:#b8f5cd;margin-bottom:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--green);box-shadow:0 0 0 0 rgba(37,211,102,.7);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+h1{font-family:'Playfair Display',serif;font-size:clamp(40px,6vw,72px);line-height:1.05;letter-spacing:-.5px}
+h1 em{font-style:normal;background:linear-gradient(120deg,var(--gold2),var(--gold) 50%,#c98a1c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.role{margin-top:18px;font-size:clamp(17px,2vw,21px);color:var(--text);font-weight:500;min-height:1.6em}
+.role .typed{color:var(--gold)}
+.role .caret{display:inline-block;width:2px;height:1.1em;background:var(--gold);vertical-align:-3px;margin-left:3px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.lead{margin-top:20px;color:var(--muted);font-size:17px;max-width:560px}
+.lead b{color:var(--text);font-weight:600}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.meta{display:flex;flex-wrap:wrap;gap:22px;margin-top:34px;color:var(--muted);font-size:14px}
+.meta span{display:flex;align-items:center;gap:7px}
+
+.portrait{position:relative;justify-self:center;width:min(420px,100%);aspect-ratio:1}
+.portrait .ring{position:absolute;inset:-14px;border-radius:50%;background:conic-gradient(from 0deg,var(--gold),transparent 30%,var(--gold2) 50%,transparent 75%,var(--gold));animation:spin 12s linear infinite;filter:blur(.5px)}
+.portrait .ring::after{content:"";position:absolute;inset:3px;border-radius:50%;background:var(--bg)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.portrait img{position:relative;width:100%;height:100%;object-fit:cover;border-radius:50%;box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 60px rgba(232,180,74,.18)}
+.chip{position:absolute;background:rgba(23,20,15,.92);border:1px solid var(--line);backdrop-filter:blur(8px);border-radius:14px;padding:10px 14px;font-size:13px;box-shadow:0 10px 30px rgba(0,0,0,.5);animation:float 5s ease-in-out infinite;white-space:nowrap}
+.chip b{display:block;color:var(--gold);font-size:18px;line-height:1.1}
+.chip.c1{top:6%;left:-12%}
+.chip.c2{bottom:12%;left:-16%;animation-delay:1.2s}
+.chip.c3{top:42%;right:-14%;animation-delay:2.4s}
+@keyframes float{50%{transform:translateY(-10px)}}
+
+/* stats */
+.stats{border-block:1px solid var(--line);background:var(--bg2)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:34px 20px;text-align:center;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat b{font-family:'Playfair Display',serif;font-size:40px;color:var(--gold);display:block;line-height:1}
+.stat span{color:var(--muted);font-size:14px;margin-top:8px;display:block}
+
+/* sections */
+section{padding:110px 0}
+.eyebrow{font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:13px;letter-spacing:2px;text-transform:uppercase}
+h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);line-height:1.15;margin-top:10px}
+.sub{color:var(--muted);max-width:620px;margin-top:14px;font-size:16.5px}
+.head{margin-bottom:56px}
+
+/* spotlight */
+.spot{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;background:linear-gradient(160deg,#1a160f,#0f0d09);border:1px solid var(--line);border-radius:28px;padding:56px;position:relative;overflow:hidden}
+.spot::after{content:"";position:absolute;width:420px;height:420px;right:-120px;top:-120px;background:radial-gradient(circle,rgba(232,180,74,.16),transparent 65%);pointer-events:none}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:5px 12px;border-radius:999px;background:rgba(232,180,74,.12);color:var(--gold2);border:1px solid rgba(232,180,74,.25)}
+.spot h3{font-family:'Playfair Display',serif;font-size:32px;line-height:1.2;margin:16px 0 14px}
+.spot p{color:var(--muted)}
+.feat{list-style:none;margin:24px 0;display:grid;gap:11px}
+.feat li{display:flex;gap:12px;font-size:15px}
+.feat li::before{content:"";flex:0 0 20px;height:20px;margin-top:2px;border-radius:6px;background:rgba(232,180,74,.14) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23e8b44a'%3E%3Cpath d='M8 13.2 4.8 10l-1.1 1.1L8 15.4l9-9-1.1-1.1z'/%3E%3C/svg%3E") center/14px no-repeat}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:22px 0 28px;font-size:12.5px}
+.flow span{padding:6px 11px;border-radius:8px;background:#211c13;border:1px solid var(--line)}
+.flow i{color:var(--goldDim);font-style:normal}
+
+/* phone */
+.phone{width:min(330px,100%);margin:0 auto;background:#0b141a;border-radius:36px;border:8px solid #1f1b14;box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px rgba(232,180,74,.25);overflow:hidden;position:relative;z-index:1}
+.wa-top{background:#1f2c34;padding:14px 16px;display:flex;align-items:center;gap:11px}
+.wa-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--gold));display:grid;place-items:center;color:#1a1306;font-weight:700;font-size:13px}
+.wa-top b{font-size:14.5px;display:block}
+.wa-top small{color:#8696a0;font-size:12px}
+.wa-body{padding:16px 12px;height:430px;display:flex;flex-direction:column;gap:8px;background:#0b141a radial-gradient(rgba(255,255,255,.025) 1px,transparent 1px) 0 0/16px 16px;overflow:hidden}
+.msg{max-width:84%;padding:8px 11px;border-radius:10px;font-size:13.2px;line-height:1.45;opacity:0;transform:translateY(8px);transition:.4s}
+.msg.show{opacity:1;transform:none}
+.msg.in{background:#202c33;align-self:flex-start;border-top-left-radius:2px}
+.msg.out{background:#005c4b;align-self:flex-end;border-top-right-radius:2px}
+.msg small{display:block;text-align:right;font-size:10.5px;color:rgba(233,237,239,.55);margin-top:2px}
+.btns{display:flex;flex-direction:column;gap:5px;align-self:flex-start;width:84%;opacity:0;transition:.4s}
+.btns.show{opacity:1}
+.btns span{background:#202c33;color:#53bdeb;text-align:center;padding:7px;border-radius:8px;font-size:13px}
+.btns span.pick{background:#2a3942}
+.hot{align-self:center;font-size:11.5px;background:rgba(232,180,74,.15);color:var(--gold2);border:1px solid rgba(232,180,74,.35);padding:5px 12px;border-radius:999px;opacity:0;transition:.4s}
+.hot.show{opacity:1}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:.3s;position:relative}
+.card:hover{transform:translateY(-6px);border-color:rgba(232,180,74,.45);box-shadow:0 24px 60px rgba(0,0,0,.5),0 0 0 1px rgba(232,180,74,.1)}
+.shot{height:180px;position:relative;overflow:hidden;display:flex;align-items:flex-end;padding:18px}
+.shot::before{content:"";position:absolute;inset:0;background:var(--g)}
+.shot::after{content:"";position:absolute;inset:0;background:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:28px 28px;mask-image:linear-gradient(transparent,#000)}
+.browser{position:absolute;top:16px;left:18px;display:flex;gap:5px;z-index:1}
+.browser i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.35)}
+.shot .big{position:relative;z-index:1;font-family:'Playfair Display',serif;font-size:27px;font-weight:700;line-height:1.1;text-shadow:0 2px 20px rgba(0,0,0,.4)}
+.shot .ico{position:absolute;right:18px;top:12px;font-size:44px;z-index:1;opacity:.9}
+.card-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.card-body .where{font-size:12px;color:var(--gold);font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.card-body h4{font-size:19px;margin:6px 0 8px}
+.card-body p{color:var(--muted);font-size:14.5px;flex:1}
+.stack{display:flex;flex-wrap:wrap;gap:6px;margin:16px 0 18px}
+.stack span{font-size:11.5px;padding:4px 9px;border-radius:6px;background:#211c13;color:#d9cdb5;border:1px solid var(--line)}
+.view{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:14px;color:var(--gold)}
+.view svg{transition:.25s}
+.card:hover .view svg{transform:translateX(4px)}
+.card.wide{grid-column:span 2}
+.card.wide .shot{height:180px}
+
+/* experience */
+.timeline{position:relative;max-width:860px}
+.timeline::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--gold),var(--line))}
+.job{position:relative;padding-left:44px;margin-bottom:46px}
+.job::before{content:"";position:absolute;left:0;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--gold);box-shadow:0 0 18px rgba(232,180,74,.5)}
+.job .when{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--gold)}
+.job h4{font-size:21px;margin-top:4px}
+.job .co{color:var(--muted);font-size:15px}
+.job ul{margin-top:12px;padding-left:18px;color:#cfc6b6;font-size:15px;display:grid;gap:6px}
+.job ul li::marker{color:var(--gold)}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.sk{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+.sk h5{font-size:15px;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.sk div{display:flex;flex-wrap:wrap;gap:7px}
+.sk span{font-size:13px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);background:#1d1912}
+
+/* contact */
+.contact{text-align:center;background:radial-gradient(700px 360px at 50% 0%,rgba(232,180,74,.14),transparent 70%),var(--bg2);border-top:1px solid var(--line)}
+.contact h2{max-width:760px;margin:10px auto 0}
+.contact .sub{margin:16px auto 0}
+.contact .cta{justify-content:center}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:860px;margin:44px auto 0}
+.cc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;transition:.25s;text-align:left;display:flex;gap:14px;align-items:center}
+.cc:hover{border-color:var(--gold)}
+.cc .ic{width:42px;height:42px;flex:0 0 42px;border-radius:12px;background:rgba(232,180,74,.12);display:grid;place-items:center;font-size:19px}
+.cc small{color:var(--muted);font-size:12px;display:block}
+.cc b{font-size:14px;font-weight:600;word-break:break-word}
+footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:980px){
+  .hero-grid,.spot{grid-template-columns:1fr}
+  .portrait{order:-1;width:min(300px,78vw);margin-top:10px}
+  .chip.c1{left:-6%}.chip.c2{left:-8%}.chip.c3{right:-6%}
+  .grid{grid-template-columns:1fr 1fr}
+  .card.wide{grid-column:span 2}
+  .skills{grid-template-columns:1fr 1fr}
+  .spot{padding:36px 26px}
+  .links{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  section{padding:80px 0}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .grid,.skills,.cards{grid-template-columns:1fr}
+  .card.wide{grid-column:auto}
+  .chip{font-size:11px;padding:7px 10px}.chip b{font-size:15px}
+  .chip.c1{left:-4%}.chip.c2{left:-4%}.chip.c3{right:-4%}
+  .spot{padding:28px 18px;border-radius:22px}
+  .spot h3{font-size:26px}
+  .hero{text-align:left}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.msg,.btns,.hot{opacity:1;transform:none}}
+</style>
 </head>
 <body>
-<style>
-  :root{
-    --bg:#EDEFEA; --bg2:#F6F7F3; --bg3:#E3E7E0;
-    --line:rgba(20,55,50,.14); --line2:rgba(20,55,50,.24);
-    --fg:#12201E; --dim:#4B5D58; --faint:#7C8C87;
-    --accent:#B26A1E; --accent-2:#158A79;
-    --accent-soft:rgba(178,106,30,.12); --teal-soft:rgba(21,138,121,.12);
-    --glow-a:rgba(178,106,30,.10); --glow-b:rgba(21,138,121,.12);
-    --shadow:0 22px 60px -30px rgba(20,45,40,.5);
-    --net-a:178,106,30; --net-b:21,138,121;
-    --mono:ui-monospace,"Cascadia Code","SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
-    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  }
-  @media (prefers-color-scheme:dark){
-    :root{
-      --bg:#08110F; --bg2:#0D1B1B; --bg3:#122626;
-      --line:rgba(130,175,168,.14); --line2:rgba(130,175,168,.26);
-      --fg:#E9EEEC; --dim:#9DB3AE; --faint:#5F736D;
-      --accent:#E6A95C; --accent-2:#45C6B4;
-      --accent-soft:rgba(230,169,92,.14); --teal-soft:rgba(69,198,180,.12);
-      --glow-a:rgba(230,169,92,.13); --glow-b:rgba(69,198,180,.15);
-      --shadow:0 30px 70px -34px rgba(0,0,0,.8);
-      --net-a:230,169,92; --net-b:69,198,180;
-    }
-  }
-  :root[data-theme="light"]{
-    --bg:#EDEFEA; --bg2:#F6F7F3; --bg3:#E3E7E0;
-    --line:rgba(20,55,50,.14); --line2:rgba(20,55,50,.24);
-    --fg:#12201E; --dim:#4B5D58; --faint:#7C8C87;
-    --accent:#B26A1E; --accent-2:#158A79;
-    --accent-soft:rgba(178,106,30,.12); --teal-soft:rgba(21,138,121,.12);
-    --glow-a:rgba(178,106,30,.10); --glow-b:rgba(21,138,121,.12);
-    --shadow:0 22px 60px -30px rgba(20,45,40,.5);
-    --net-a:178,106,30; --net-b:21,138,121;
-  }
-  :root[data-theme="dark"]{
-    --bg:#08110F; --bg2:#0D1B1B; --bg3:#122626;
-    --line:rgba(130,175,168,.14); --line2:rgba(130,175,168,.26);
-    --fg:#E9EEEC; --dim:#9DB3AE; --faint:#5F736D;
-    --accent:#E6A95C; --accent-2:#45C6B4;
-    --accent-soft:rgba(230,169,92,.14); --teal-soft:rgba(69,198,180,.12);
-    --glow-a:rgba(230,169,92,.13); --glow-b:rgba(69,198,180,.15);
-    --shadow:0 30px 70px -34px rgba(0,0,0,.8);
-    --net-a:230,169,92; --net-b:69,198,180;
-  }
 
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--bg);color:var(--fg);font-family:var(--sans);line-height:1.6;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden;font-size:16px}
-  .app{position:relative;z-index:2}
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">Ancymol<span>.</span></a>
+    <div class="links">
+      <a href="#automation">Automation</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+    </div>
+    <a href="#contact" class="btn btn-gold nav-cta">Hire me</a>
+  </div>
+</nav>
 
-  #net{position:fixed;inset:0;z-index:0;pointer-events:none}
-  .bg{position:fixed;inset:0;z-index:0;pointer-events:none}
-  .bg::before{content:"";position:absolute;inset:0;
-    background:radial-gradient(60% 50% at 10% -5%,var(--glow-a),transparent 68%),
-      radial-gradient(55% 55% at 95% 105%,var(--glow-b),transparent 68%)}
-  .spot{position:fixed;width:520px;height:520px;left:0;top:0;z-index:1;pointer-events:none;
-    transform:translate(-50%,-50%);border-radius:50%;opacity:0;transition:opacity .3s;
-    background:radial-gradient(circle,var(--glow-a),transparent 62%)}
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="badge"><span class="dot"></span>Dubai, UAE · Available to join immediately</div>
+      <h1>Hi, I'm Ancymol.<br>I build systems that <em>turn leads into customers.</em></h1>
+      <p class="role">Full Stack Developer — <span class="typed" id="typed">WhatsApp &amp; AI Automation</span><span class="caret"></span></p>
+      <p class="lead">4 years shipping <b>ecommerce platforms</b> (Magento 2, Laravel, Next.js) and <b>business automation</b> for brands like <b>Acer Australia</b> and <b>Proxima</b> real estate. In Dubai I build end-to-end — from the company website to a WhatsApp bot that answers property leads at 2&nbsp;AM.</p>
+      <div class="cta">
+        <a href="#projects" class="btn btn-gold">View my projects
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="assets/Ancymol_KK_CV.pdf" class="btn btn-ghost" download>Download CV</a>
+      </div>
+      <div class="meta">
+        <span>✉️ ancymol.softwaredev@gmail.com</span>
+        <span>📞 +971 56 183 5793</span>
+      </div>
+    </div>
+    <div class="portrait">
+      <div class="ring"></div>
+      <img src="assets/ancymol.webp" alt="Ancymol KK, Full Stack Developer" width="420" height="420">
+      <div class="chip c1"><b>4+ yrs</b>Full stack</div>
+      <div class="chip c2"><b>64+</b>real-estate sites</div>
+      <div class="chip c3"><b>24/7</b>lead replies</div>
+    </div>
+  </div>
+</header>
 
-  .progress{position:fixed;top:0;left:0;height:2px;width:0;z-index:60;
-    background:linear-gradient(90deg,var(--accent),var(--accent-2));box-shadow:0 0 12px var(--accent-soft)}
-  .wrap{width:min(1120px,92vw);margin:0 auto}
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><b data-count="4">0</b><span>Years experience<br>(India + UAE)</span></div>
+    <div class="stat"><b data-count="64" data-suffix="+">0</b><span>Real-estate websites<br>supported (Proxima)</span></div>
+    <div class="stat"><b data-count="6">0</b><span>Days to ship a full<br>ecommerce store</span></div>
+    <div class="stat"><b data-count="10" data-suffix="+">0</b><span>Payment, shipping &amp;<br>marketplace integrations</span></div>
+  </div>
+</div>
 
-  /* menu bar */
-  .menubar{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
-    background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
-  .menubar .wrap{display:flex;align-items:center;gap:20px;height:56px}
-  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-family:var(--mono);font-size:14px;font-weight:600}
-  .brand .mk{width:26px;height:26px;flex:none}
-  .brand .u{color:var(--accent)} .brand .p{color:var(--faint)}
-  .menu-links{display:flex;gap:2px;margin-left:8px}
-  .menu-links a{font-family:var(--mono);font-size:12.5px;color:var(--dim);text-decoration:none;padding:7px 11px;border-radius:7px;transition:.18s}
-  .menu-links a:hover{color:var(--fg);background:var(--bg3)}
-  .mb-right{margin-left:auto;display:flex;align-items:center;gap:10px}
-  .clock{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.02em;font-variant-numeric:tabular-nums}
-  .kbtn{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--dim);
-    background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:7px 10px;cursor:pointer;transition:.18s}
-  .kbtn:hover{border-color:var(--accent);color:var(--fg)}
-  .kbtn kbd{background:var(--bg3);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font:inherit;font-size:11px}
-  .icon-btn{width:36px;height:36px;display:grid;place-items:center;background:var(--bg2);border:1px solid var(--line);border-radius:8px;cursor:pointer;color:var(--dim);transition:.18s}
-  .icon-btn:hover{border-color:var(--accent);color:var(--accent)}
-  .icon-btn svg{width:16px;height:16px}
-  @media(max-width:900px){.menu-links,.clock{display:none}.kbtn .lbl{display:none}}
+<!-- AUTOMATION SPOTLIGHT -->
+<section id="automation">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">// Featured build</div>
+      <h2>A WhatsApp assistant for a<br>Dubai real-estate agency</h2>
+    </div>
+    <div class="spot rv">
+      <div>
+        <span class="tag">Live demo · Node.js · n8n · Meta WhatsApp Cloud API</span>
+        <h3>Every Bayut lead answered in seconds — in English or Arabic.</h3>
+        <p>Property leads arrive at all hours, and a missed call usually means a lost tenant. I designed and built the whole platform: a bot that qualifies the customer, matches them to real units, scores the lead and hands it to the right salesperson.</p>
+        <ul class="feat">
+          <li>Smart question flow per property type (apartment, villa, office, shop)</li>
+          <li>Reads the Bayut listing reference and skips questions it already knows</li>
+          <li>Scores leads HOT / WARM / COLD and assigns an agent automatically</li>
+          <li>Missed-call recovery and timed follow-ups orchestrated with n8n</li>
+          <li>Team dashboard: chats, roles &amp; logins, audit log, owner accountability view</li>
+        </ul>
+        <div class="flow mono">
+          <span>Bayut lead</span><i>→</i><span>WhatsApp bot</span><i>→</i><span>Qualify</span><i>→</i><span>Match units</span><i>→</i><span>Agent + n8n</span>
+        </div>
+        <div class="cta" style="margin-top:0">
+          <a href="https://automation.c36.airoapp.ai/dashboard" target="_blank" rel="noopener" class="btn btn-gold">View live dashboard
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+          <a href="#contact" class="btn btn-ghost">Ask me for a walkthrough</a>
+        </div>
+      </div>
 
-  /* hero */
-  .hero{padding:70px 0 34px}
-  .hero .wrap{display:grid;grid-template-columns:1fr 1.02fr;gap:44px;align-items:center}
-  .status{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:12px;
-    color:var(--accent-2);border:1px solid var(--line2);border-radius:100px;padding:6px 13px;background:var(--teal-soft)}
-  .status .dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);animation:pulse 2.4s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 color-mix(in srgb,var(--accent-2) 60%,transparent)}70%{box-shadow:0 0 0 9px transparent}100%{box-shadow:0 0 0 0 transparent}}
-  .hero h1{font-family:var(--mono);font-weight:600;letter-spacing:-.02em;line-height:1.05;
-    font-size:clamp(33px,5vw,56px);margin:20px 0 8px;text-wrap:balance}
-  .hero h1 .name{display:block;font-size:clamp(12px,1.4vw,14px);letter-spacing:.3em;text-transform:uppercase;color:var(--faint);margin-bottom:16px;font-weight:500}
-  .hero h1 .amp{color:var(--accent)}
-  .lead{color:var(--dim);font-size:clamp(15px,1.6vw,16.5px);max-width:34em;margin-top:18px}
-  .lead b{color:var(--fg);font-weight:600}
-  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-  .btn{font-family:var(--mono);font-size:13px;text-decoration:none;padding:12px 18px;border-radius:9px;
-    display:inline-flex;align-items:center;gap:8px;transition:.2s;border:1px solid transparent;cursor:pointer}
-  .btn-primary{background:var(--accent);color:#0A1315}
-  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 28px -12px var(--accent)}
-  .btn-ghost{border-color:var(--line2);color:var(--fg);background:transparent}
-  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-  :root[data-theme="dark"] .btn-primary{color:#08110F}
-  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-primary{color:#08110F}}
-  :root[data-theme="light"] .btn-primary{color:#FDFBF6}
+      <div class="phone" aria-label="Example WhatsApp conversation">
+        <div class="wa-top">
+          <div class="wa-av">UAA</div>
+          <div><b>United Arab Agencies</b><small>online</small></div>
+        </div>
+        <div class="wa-body" id="chat">
+          <div class="msg in">Hi, I'm interested in this property. Reference no.: 8737-GwHbTd<small>02:14</small></div>
+          <div class="msg out">Hello! 👋 Thanks for contacting United Arab Agencies. I see you're looking at the <b>2 BR apartment in Al Nahda</b> for rent.<small>02:14 ✓✓</small></div>
+          <div class="msg out">When would you like to move in?<small>02:14 ✓✓</small></div>
+          <div class="btns"><span>Immediately</span><span class="pick">Within 1 month</span><span>Just browsing</span></div>
+          <div class="msg in">Within 1 month<small>02:15</small></div>
+          <div class="msg out">Perfect ✅ I've found 3 matching units. Our consultant <b>Shifa</b> will call you at 9:00 AM.<small>02:15 ✓✓</small></div>
+          <div class="hot">🔥 HOT lead · assigned to Shifa</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  /* interactive terminal */
-  .term{background:color-mix(in srgb,var(--bg2) 92%,transparent);border:1px solid var(--line2);border-radius:14px;
-    overflow:hidden;box-shadow:var(--shadow);backdrop-filter:blur(6px);cursor:text}
-  .term-bar{display:flex;align-items:center;gap:7px;padding:11px 14px;border-bottom:1px solid var(--line);background:var(--bg3)}
-  .term-bar i{width:11px;height:11px;border-radius:50%;background:var(--faint);opacity:.5}
-  .term-bar i:nth-child(1){background:#E0645E;opacity:.9}
-  .term-bar i:nth-child(2){background:#E6A95C;opacity:.9}
-  .term-bar i:nth-child(3){background:#45C6B4;opacity:.9}
-  .term-bar .tt{margin-left:8px;font-family:var(--mono);font-size:11.5px;color:var(--faint)}
-  .term-bar .hint{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--faint)}
-  .term-body{font-family:var(--mono);font-size:13px;line-height:1.75;padding:16px 16px 14px;height:360px;overflow-y:auto}
-  .term-body::-webkit-scrollbar{width:8px}
-  .term-body::-webkit-scrollbar-thumb{background:var(--line2);border-radius:4px}
-  .term-body .ln{white-space:pre-wrap;word-break:break-word}
-  .pr{color:var(--accent)} .ok{color:var(--accent-2)} .cm{color:var(--fg)} .out{color:var(--dim)}
-  .warn{color:#E6A95C} .key{color:var(--accent-2)} .mut{color:var(--faint)}
-  .term-body a{color:var(--accent-2);text-decoration:none;border-bottom:1px solid var(--line2)}
-  .inputline{display:flex;align-items:center;gap:6px}
-  .inputline .pr{flex:none}
-  .cmdin{flex:1;background:transparent;border:none;outline:none;color:var(--fg);font-family:var(--mono);font-size:13px;caret-color:var(--accent)}
-  .cursor{display:inline-block;width:8px;height:15px;background:var(--accent);vertical-align:-2px;animation:blink 1s steps(1) infinite}
-  @keyframes blink{50%{opacity:0}}
+<!-- PROJECTS -->
+<section id="projects" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">// Selected work</div>
+      <h2>Projects I've built &amp; shipped</h2>
+      <p class="sub">From solo builds in Dubai to enterprise platforms for international brands. Click any card to see it live.</p>
+    </div>
 
-  /* pipeline signature */
-  .pipe-sec{padding:20px 0 44px}
-  .pipe-head{text-align:center;margin-bottom:26px}
-  .pipe-head .eyebrow{justify-content:center}.pipe-head .eyebrow::before{display:none}
-  .pipe-head h2{font-family:var(--mono);font-size:clamp(20px,2.6vw,26px);font-weight:600;letter-spacing:-.02em;margin-top:10px}
-  .pipe-head span.b{color:var(--accent)}
-  .pipe{position:relative;display:grid;grid-template-columns:repeat(6,1fr);gap:10px;padding:22px 0}
-  .pipe::before{content:"";position:absolute;left:5%;right:5%;top:50%;height:2px;transform:translateY(-50%);
-    background:linear-gradient(90deg,var(--line2),var(--line2))}
-  .pipe .flow{content:"";position:absolute;left:5%;top:50%;width:70px;height:2px;transform:translateY(-50%);
-    background:linear-gradient(90deg,transparent,var(--accent),transparent);filter:blur(.3px);
-    animation:flow 3.2s linear infinite}
-  .pipe .flow.f2{animation-delay:1.06s;background:linear-gradient(90deg,transparent,var(--accent-2),transparent)}
-  .pipe .flow.f3{animation-delay:2.13s}
-  @keyframes flow{0%{left:5%;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:calc(95% - 70px);opacity:0}}
-  .node{position:relative;z-index:1;background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:16px 10px;text-align:center;transition:.25s}
-  .node:hover{border-color:var(--accent);transform:translateY(-4px)}
-  .node .g{font-family:var(--mono);font-size:18px;color:var(--accent);display:block}
-  .node .t{font-size:13px;font-weight:600;margin-top:8px}
-  .node .s{font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:4px;display:block}
-  .node.dev .g{color:var(--accent)} .node.comm .g{color:var(--accent-2)}
-  .pipe-legend{display:flex;justify-content:center;gap:24px;margin-top:18px;font-family:var(--mono);font-size:11.5px;color:var(--dim);flex-wrap:wrap}
-  .pipe-legend b{display:inline-flex;align-items:center;gap:7px}
-  .pipe-legend .sw{width:10px;height:10px;border-radius:3px}
-  @media(max-width:760px){.pipe{grid-template-columns:1fr 1fr 1fr}.pipe::before,.pipe .flow{display:none}}
-  @media(max-width:420px){.pipe{grid-template-columns:1fr 1fr}}
-
-  /* sections */
-  section{padding:72px 0}
-  .eyebrow{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
-  .eyebrow::before{content:"";width:22px;height:1px;background:var(--accent)}
-  .s-head{margin-bottom:40px;max-width:52em}
-  .s-head h2{font-family:var(--mono);font-size:clamp(24px,3.4vw,34px);font-weight:600;letter-spacing:-.02em;margin:14px 0 10px;text-wrap:balance}
-  .s-head p{color:var(--dim)}
-
-  .impact{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg2) 55%,transparent)}
-  .impact .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-  .stat{padding:28px 22px;border-left:1px solid var(--line)}
-  .stat:first-child{border-left:none}
-  .stat .n{font-family:var(--mono);font-size:clamp(28px,4vw,42px);font-weight:600;line-height:1;letter-spacing:-.02em}
-  .stat .n .s{color:var(--accent)}
-  .stat .l{font-family:var(--mono);font-size:11.5px;color:var(--dim);margin-top:10px}
-  @media(max-width:720px){.impact .wrap{grid-template-columns:1fr 1fr}.stat:nth-child(3){border-left:none}}
-
-  .about{display:grid;grid-template-columns:1.4fr 1fr;gap:44px}
-  .about p{color:var(--dim);margin-bottom:16px;max-width:42em}
-  .about p b{color:var(--fg)}
-  .about a.inl{color:var(--accent-2);text-decoration:none;border-bottom:1px solid var(--line2)}
-  .facts{list-style:none;border:1px solid var(--line);border-radius:12px;overflow:hidden;align-self:start;background:var(--bg2)}
-  .facts li{display:flex;justify-content:space-between;gap:16px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:13.5px}
-  .facts li:last-child{border-bottom:none}
-  .facts .k{font-family:var(--mono);color:var(--faint);font-size:12px}
-  .facts .v{color:var(--fg);text-align:right}
-  .facts .v a{color:var(--accent-2);text-decoration:none}
-
-  .svc{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .card{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:26px;position:relative;overflow:hidden;transition:.25s}
-  .card:hover{border-color:var(--line2);transform:translateY(-3px)}
-  .card .num{font-family:var(--mono);font-size:12px;color:var(--accent)}
-  .card h3{font-size:19px;margin:12px 0 8px;letter-spacing:-.01em}
-  .card p{color:var(--dim);font-size:13.5px;margin-bottom:14px}
-  .svc-wide{grid-column:1/-1;display:grid;grid-template-columns:auto 1fr;gap:26px;align-items:center}
-  .svc-wide .badge{font-family:var(--mono);font-size:11px;color:var(--accent-2);border:1px solid var(--line2);border-radius:8px;padding:5px 10px;background:var(--teal-soft);white-space:nowrap;align-self:start}
-  @media(max-width:640px){.svc-wide{grid-template-columns:1fr}}
-  .tags{display:flex;flex-wrap:wrap;gap:6px}
-  .tags span{font-family:var(--mono);font-size:10.5px;color:var(--accent-2);border:1px solid var(--line2);padding:4px 9px;border-radius:5px}
-
-  .stack{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .st{background:var(--bg2);border:1px solid var(--line);border-radius:12px;padding:22px}
-  .st h4{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
-  @media(max-width:760px){.stack{grid-template-columns:1fr 1fr}}
-  @media(max-width:480px){.stack{grid-template-columns:1fr}.svc{grid-template-columns:1fr}}
-
-  .log{font-family:var(--mono);font-size:13.5px;border-left:1px solid var(--line2);margin-left:8px}
-  .commit{position:relative;padding:0 0 34px 34px}
-  .commit:last-child{padding-bottom:0}
-  .commit::before{content:"";position:absolute;left:-6px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--bg);border:2px solid var(--accent-2)}
-  .commit.head::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
-  .c-line{color:var(--faint)} .c-line .hash{color:var(--accent)} .c-line .ref{color:var(--accent-2)}
-  .commit h3{font-family:var(--sans);font-size:17px;margin:8px 0 3px;letter-spacing:-.01em}
-  .commit .co{color:var(--accent-2);font-size:12.5px}
-  .commit ul{list-style:none;margin-top:12px;display:grid;gap:6px}
-  .commit li{color:var(--dim);font-size:13px;padding-left:18px;position:relative}
-  .commit li::before{content:"+";position:absolute;left:0;color:var(--accent-2);font-family:var(--mono)}
-
-  .feat{background:var(--bg2);border:1px solid var(--line2);border-radius:16px;padding:30px;margin-bottom:16px;position:relative;overflow:hidden}
-  .feat::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 120% at 100% 0%,var(--accent-soft),transparent 60%);pointer-events:none}
-  .feat .tag{font-family:var(--mono);font-size:11px;color:var(--accent);border:1px solid var(--line2);border-radius:6px;padding:4px 9px;background:var(--accent-soft)}
-  .feat h3{font-size:24px;margin:14px 0 10px;letter-spacing:-.01em}
-  .feat p{color:var(--dim);max-width:52em;margin-bottom:16px}
-  .proj{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .pc{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:22px;display:flex;flex-direction:column;transition:.25s}
-  .pc:hover{border-color:var(--accent);transform:translateY(-3px)}
-  .pc .pt{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
-  .pc .tag{font-family:var(--mono);font-size:10.5px;color:var(--accent)}
-  .pc h3{font-size:17px;margin:8px 0 8px;letter-spacing:-.01em}
-  .pc p{color:var(--dim);font-size:13px;flex:1;margin-bottom:14px}
-  .pc .sl{font-family:var(--mono);font-size:11px;color:var(--faint);border-top:1px solid var(--line);padding-top:12px}
-  .visit{font-family:var(--mono);font-size:11.5px;color:var(--accent-2);text-decoration:none;white-space:nowrap}
-  .visit:hover{color:var(--accent)}
-  @media(max-width:820px){.proj{grid-template-columns:1fr 1fr}}
-  @media(max-width:540px){.proj{grid-template-columns:1fr}.about{grid-template-columns:1fr}.hero .wrap{grid-template-columns:1fr;gap:32px}}
-
-  .contact{text-align:center;background:var(--bg2);border:1px solid var(--line2);border-radius:18px;padding:52px 30px;position:relative;overflow:hidden}
-  .contact::before{content:"";position:absolute;inset:0;background:radial-gradient(70% 120% at 50% 0%,var(--accent-soft),transparent 60%);pointer-events:none}
-  .contact .eyebrow{justify-content:center}.contact .eyebrow::before{display:none}
-  .contact h2{font-family:var(--mono);font-size:clamp(24px,3.6vw,34px);margin:14px 0 12px;letter-spacing:-.02em}
-  .contact p{color:var(--dim);max-width:40em;margin:0 auto 26px}
-  .contact .cta{justify-content:center}
-
-  footer{border-top:1px solid var(--line);padding:26px 0}
-  footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-  footer .fb{font-family:var(--mono);font-size:12.5px;color:var(--faint);display:flex;align-items:center;gap:10px}
-  footer a{color:var(--dim);text-decoration:none;font-family:var(--mono);font-size:12.5px;margin-left:16px}
-  footer a:hover{color:var(--accent)}
-
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
-  .reveal.in{opacity:1;transform:none}
-
-  .cmdk{position:fixed;inset:0;z-index:100;display:none;align-items:flex-start;justify-content:center;padding-top:14vh;
-    background:color-mix(in srgb,#000 55%,transparent);backdrop-filter:blur(4px)}
-  .cmdk.open{display:flex}
-  .palette{width:min(560px,92vw);background:var(--bg2);border:1px solid var(--line2);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);animation:pop .18s ease}
-  @keyframes pop{from{transform:translateY(-8px) scale(.98);opacity:0}to{transform:none;opacity:1}}
-  .palette input{width:100%;border:none;outline:none;background:transparent;color:var(--fg);font-family:var(--mono);font-size:15px;padding:18px;border-bottom:1px solid var(--line)}
-  .palette input::placeholder{color:var(--faint)}
-  .plist{max-height:52vh;overflow:auto;padding:8px}
-  .pgroup{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.1em;text-transform:uppercase;padding:10px 12px 6px}
-  .pitem{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:9px;cursor:pointer;font-size:14px}
-  .pitem .pi-ic{width:26px;height:26px;flex:none;display:grid;place-items:center;border-radius:7px;background:var(--bg3);color:var(--accent);font-family:var(--mono);font-size:13px}
-  .pitem .pi-sub{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--faint)}
-  .pitem.sel,.pitem:hover{background:var(--accent-soft)}
-  .pfoot{display:flex;gap:16px;padding:10px 14px;border-top:1px solid var(--line);font-family:var(--mono);font-size:11px;color:var(--faint)}
-  .pfoot kbd{background:var(--bg3);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
-
-  @media (prefers-reduced-motion:reduce){
-    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-    .reveal{opacity:1;transform:none}.spot{display:none}.pipe .flow{display:none}
-  }
-</style>
-
-<canvas id="net"></canvas>
-<div class="bg"></div>
-<div class="spot" id="spot"></div>
-<div class="progress" id="progress"></div>
-
-<div class="app">
-  <header class="menubar">
-    <div class="wrap">
-      <a href="#top" class="brand">
-        <svg class="mk" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect x="1" y="1" width="30" height="30" rx="8" stroke="currentColor" stroke-opacity=".3"/>
-          <path d="M9 22 L16 9 L23 22" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12.2 17 H19.8" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/>
-        </svg>
-        <span>ancy<span class="u">@</span>dubai<span class="p">:~$</span></span>
+    <div class="grid">
+      <a class="card wide rv" href="https://prototype-uaa.vercel.app/" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#3a2a0e,#8a6420 55%,#e8b44a)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🏙️</div>
+          <div class="big">United Arab Agencies<br>— new website</div>
+        </div>
+        <div class="card-body">
+          <div class="where">Dubai · Solo build</div>
+          <h4>Real-estate company website &amp; property showcase</h4>
+          <p>A modern, fast website for a Dubai agency leasing 70+ units across 10 buildings — property listings, building pages and enquiry flows connected to WhatsApp. Designed, built and deployed on my own.</p>
+          <div class="stack"><span>Next.js</span><span>Laravel</span><span>Vercel</span><span>Responsive UI</span></div>
+          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
       </a>
-      <nav class="menu-links">
-        <a href="#about">about</a><a href="#pipeline">pipeline</a><a href="#services">services</a>
-        <a href="#stack">stack</a><a href="#work">work</a><a href="#projects">projects</a>
-      </nav>
-      <div class="mb-right">
-        <span class="clock" id="clock">--:--:-- GST</span>
-        <button class="kbtn" id="openK"><span class="lbl">Search</span> <kbd>⌘</kbd><kbd>K</kbd></button>
-        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
 
-  <header class="hero" id="top">
-    <div class="wrap">
-      <div>
-        <span class="status"><span class="dot"></span>Open for freelance &amp; contract work</span>
-        <h1><span class="name">Ancy Mol KK · Full-Stack Engineer</span>I build the product <span class="amp">&amp;</span> run the storefront.</h1>
-        <p class="lead">Full-stack engineer in Dubai shipping <b>Laravel</b> &amp; <b>Next.js</b> platforms, <b>WordPress</b> &amp; <b>Shopify</b> stores — and running the commercial side myself: Noon &amp; Amazon.ae listings, Bayut, and <b>WhatsApp &amp; AI-voice lead automation</b>.</p>
-        <div class="cta">
-          <a href="#projects" class="btn btn-primary">View work ↗</a>
-          <a href="#contact" class="btn btn-ghost">Start a project</a>
+      <a class="card rv" href="https://ipureherbs.org" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#0f2a1a,#1f6b3f 60%,#7fcf8a)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🌿</div>
+          <div class="big">iPure Herbs</div>
+        </div>
+        <div class="card-body">
+          <div class="where">UAE · Ecommerce</div>
+          <h4>Herbal supplements store</h4>
+          <p>Full ecommerce with instant search, 4 payment gateways incl. buy-now-pay-later, international shipping and email marketing.</p>
+          <div class="stack"><span>Laravel 12</span><span>Next.js 15</span><span>Redis</span><span>Meilisearch</span><span>Stripe · Tabby · Tamara</span></div>
+          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card rv" href="https://www.proxima.com.au" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#0d1b2e,#1d4f80 60%,#4fa3d9)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🏘️</div>
+          <div class="big">Proxima<br><small style="font-size:15px;font-family:Inter">Australia · Indonesia</small></div>
+        </div>
+        <div class="card-body">
+          <div class="where">PropTech · Team project</div>
+          <h4>Real-estate reservation platform — 64+ agent sites</h4>
+          <p>Shared architecture powering 64+ sub-agent websites, with mobile-app APIs, chatbot &amp; email automation, commission system and sales reporting.</p>
+          <div class="stack"><span>PHP</span><span>REST APIs</span><span>Automation</span><span>Multi-site</span></div>
+          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card rv" href="https://www.acer.com/au-en" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#0d2614,#1d6b2e 60%,#83c341)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">💻</div>
+          <div class="big">Acer Australia</div>
+        </div>
+        <div class="card-body">
+          <div class="where">Enterprise · Backend lead</div>
+          <h4>Large Magento 2 storefront</h4>
+          <p>Custom modules, third-party API integrations, upgrades and performance tuning on a high-traffic multi-store platform.</p>
+          <div class="stack"><span>Magento 2</span><span>PHP</span><span>MySQL</span><span>APIs</span></div>
+          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card rv" href="https://baniyasoasiselectronics.com/" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#1b1030,#4b2a8a 60%,#a07ae8)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🔌</div>
+          <div class="big">Baniyas Oasis<br>Electronics</div>
+        </div>
+        <div class="card-body">
+          <div class="where">UAE · Built in 6 days</div>
+          <h4>Electronics ecommerce store</h4>
+          <p>Complete online store launched solo in 6 days, with Stripe payments plus Noon and Bayut marketplace listings.</p>
+          <div class="stack"><span>WordPress</span><span>WooCommerce</span><span>Stripe</span><span>Noon</span></div>
+          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card rv" href="https://www.caravel.qa" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#2a0f14,#7a1f2e 60%,#d9586c)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🛍️</div>
+          <div class="big">Caravel Qatar</div>
+        </div>
+        <div class="card-body">
+          <div class="where">Qatar · Ecommerce</div>
+          <h4>Catalog &amp; storefront</h4>
+          <p>Catalog management and storefront development on a large Magento platform.</p>
+          <div class="stack"><span>Magento 2</span><span>PHP</span><span>Catalog</span></div>
+          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <div class="card wide rv">
+        <div class="shot" style="--g:linear-gradient(135deg,#1e1a12,#4a3d22 60%,#a88a4a)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">📦</div>
+          <div class="big">Inventory<br>System</div>
+        </div>
+        <div class="card-body">
+          <div class="where">Dubai · In-house software</div>
+          <h4>Inventory &amp; invoicing system</h4>
+          <p>Products, stock, invoicing, returns and transaction tracking — internal software used daily by the operations team.</p>
+          <div class="stack"><span>Yii Framework</span><span>PHP</span><span>MySQL</span></div>
+          <span class="view" style="color:var(--muted)">Private — demo on request</span>
         </div>
       </div>
-      <div>
-        <div class="term" id="termWrap">
-          <div class="term-bar"><i></i><i></i><i></i><span class="tt">zsh — ~/ancy</span><span class="hint">type a command ↵</span></div>
-          <div class="term-body" id="term"></div>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="pipe-sec" id="pipeline">
-    <div class="wrap">
-      <div class="pipe-head reveal">
-        <div class="eyebrow">Both ends of the funnel</div>
-        <h2>From a <span class="b">line of code</span> to a <span class="b">qualified lead</span> — one operator.</h2>
-      </div>
-      <div class="pipe reveal">
-        <div class="flow"></div><div class="flow f2"></div><div class="flow f3"></div>
-        <div class="node dev"><span class="g">&lt;/&gt;</span><span class="t">Build</span><span class="s">Laravel · Next.js</span></div>
-        <div class="node dev"><span class="g">⇡</span><span class="t">Ship</span><span class="s">deploy · cPanel</span></div>
-        <div class="node dev"><span class="g">▤</span><span class="t">List</span><span class="s">Noon · Amazon</span></div>
-        <div class="node comm"><span class="g">◈</span><span class="t">Advertise</span><span class="s">Google · Bayut</span></div>
-        <div class="node comm"><span class="g">✆</span><span class="t">Qualify</span><span class="s">WhatsApp · AI voice</span></div>
-        <div class="node comm"><span class="g">✓</span><span class="t">Convert</span><span class="s">HOT / WARM lead</span></div>
-      </div>
-      <div class="pipe-legend reveal">
-        <b><span class="sw" style="background:var(--accent)"></span> Engineering</b>
-        <b><span class="sw" style="background:var(--accent-2)"></span> Commercial ops</b>
-      </div>
-    </div>
-  </section>
-
-  <div class="impact">
-    <div class="wrap" id="stats">
-      <div class="stat"><div class="n"><span data-count="4">0</span><span class="s">+</span></div><div class="l">years shipping production</div></div>
-      <div class="stat"><div class="n"><span data-count="7">0</span></div><div class="l">flagship platforms built</div></div>
-      <div class="stat"><div class="n"><span data-count="3">0</span></div><div class="l">marketplace channels run</div></div>
-      <div class="stat"><div class="n"><span data-count="5">0</span></div><div class="l">languages spoken</div></div>
     </div>
   </div>
+</section>
 
-  <main>
-    <section id="about">
-      <div class="wrap">
-        <div class="about reveal">
-          <div>
-            <div class="eyebrow">About</div>
-            <h2 style="font-family:var(--mono);font-size:clamp(22px,3vw,30px);font-weight:600;letter-spacing:-.02em;margin:14px 0 18px;">Two disciplines, one operator.</h2>
-            <p><b>I'm a full-stack developer based in Dubai</b>, building and maintaining production platforms at United Arab Agencies — including the Laravel rebuild of <a class="inl" href="https://uaa.ae/" target="_blank" rel="noopener">uaa.ae</a> and a solo-built WhatsApp &amp; AI-voice lead-automation platform.</p>
-            <p>Alongside the code, I run the commercial side of two channels myself: creating and advertising product listings on Noon UAE and Amazon.ae, and managing Bayut property listings and Google Ads for real estate in Deira. I also built and run <b>Baniyas Oasis Electronics</b>, a WooCommerce store, end to end.</p>
-            <p>That combination — shipping the code <em>and</em> running the storefront — is what I bring to freelance projects: platforms built well and set up to convert.</p>
-          </div>
-          <ul class="facts">
-            <li><span class="k">location</span><span class="v">Dubai, UAE</span></li>
-            <li><span class="k">role</span><span class="v">Full-Stack / Ecommerce Backend Dev</span></li>
-            <li><span class="k">core_stack</span><span class="v">Laravel · Next.js · WP · Shopify</span></li>
-            <li><span class="k">markets</span><span class="v">Noon · Amazon.ae · Bayut</span></li>
-            <li><span class="k">languages</span><span class="v">EN · ML · TA · HI · AR</span></li>
-            <li><span class="k">linkedin</span><span class="v"><a href="https://www.linkedin.com/in/ancy-mol-31ba11220" target="_blank" rel="noopener">ancy-mol ↗</a></span></li>
-          </ul>
-        </div>
+<!-- EXPERIENCE -->
+<section id="experience" style="background:var(--bg2);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">// Experience</div>
+      <h2>Where I've worked</h2>
+    </div>
+    <div class="timeline">
+      <div class="job rv">
+        <div class="when">JAN 2026 — PRESENT</div>
+        <h4>Full Stack Developer (Ecommerce &amp; Automation)</h4>
+        <div class="co">United Arab Agencies · Dubai, UAE</div>
+        <ul>
+          <li>Built and deployed the company website solo (Next.js + Laravel).</li>
+          <li>Designed the WhatsApp &amp; Bayut lead automation platform, lead-gen CRM and AI workflows.</li>
+          <li>Developed the in-house inventory &amp; invoicing system; run iPure Herbs ecommerce.</li>
+          <li>Managed Noon &amp; Bayut listings; sourced, screened and interviewed candidates.</li>
+        </ul>
       </div>
-    </section>
-
-    <section id="services">
-      <div class="wrap">
-        <div class="s-head reveal">
-          <div class="eyebrow">Freelance Services</div>
-          <h2>What I take on</h2>
-          <p>Five areas, one developer — pick one or combine them for a project that's built and launched properly.</p>
-        </div>
-        <div class="svc">
-          <div class="card reveal"><div class="num">01</div><h3>Web App Development</h3><p>Custom platforms and admin tools on Laravel or Next.js, with clean data layers and REST APIs.</p><div class="tags"><span>Laravel</span><span>Next.js</span><span>MySQL</span><span>REST API</span></div></div>
-          <div class="card reveal"><div class="num">02</div><h3>eCommerce Builds</h3><p>Full storefronts on WooCommerce or Shopify — catalog, payments and checkout, set up solo end to end.</p><div class="tags"><span>WordPress</span><span>WooCommerce</span><span>Shopify</span><span>Stripe</span></div></div>
-          <div class="card reveal"><div class="num">03</div><h3>Marketplace Growth</h3><p>Listing creation and sponsored-ad campaigns on Noon UAE and Amazon.ae — built to be found, not just published.</p><div class="tags"><span>Noon Ads</span><span>Amazon Ads</span><span>Listing SEO</span></div></div>
-          <div class="card reveal"><div class="num">04</div><h3>Real Estate Marketing</h3><p>Bayut listings, Google Ads campaigns and landing pages for residential and commercial property.</p><div class="tags"><span>Bayut</span><span>Google Ads</span><span>Landing Pages</span></div></div>
-          <div class="card svc-wide reveal">
-            <span class="badge">05 · NEW</span>
-            <div>
-              <h3 style="margin-top:0">WhatsApp &amp; Call Automation</h3>
-              <p>Lead platforms that answer, qualify and follow up on their own — WhatsApp Cloud API chatbots and AI voice agents on a Node/TypeScript backend, with n8n handling routing and notifications. Built solo, end to end, for United Arab Agencies.</p>
-              <div class="tags"><span>WhatsApp Cloud API</span><span>AI Voice Agent</span><span>Node.js / TypeScript</span><span>n8n</span><span>Lead Qualification</span></div>
-            </div>
-          </div>
-        </div>
+      <div class="job rv">
+        <div class="when">DEC 2023 — SEP 2025</div>
+        <h4>Software Engineer L2</h4>
+        <div class="co">Zerone Consultancy · Infopark, India</div>
+        <ul>
+          <li>Enterprise Magento 2 for Acer Australia, Foxtel and Caravel Qatar.</li>
+          <li>Custom modules for bookings, product lifecycle and event scheduling.</li>
+          <li>PropTech architecture for Proxima's 64+ real-estate websites (Australia &amp; Indonesia).</li>
+        </ul>
       </div>
-    </section>
-
-    <section id="stack">
-      <div class="wrap">
-        <div class="s-head reveal">
-          <div class="eyebrow">Stack</div>
-          <h2>Every layer, one developer</h2>
-          <p>From the storefront a customer clicks through, down to the database and payment gateway underneath.</p>
-        </div>
-        <div class="stack">
-          <div class="st reveal"><h4>Frontend</h4><div class="tags"><span>Next.js</span><span>React</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Bootstrap</span></div></div>
-          <div class="st reveal"><h4>Backend &amp; Frameworks</h4><div class="tags"><span>PHP</span><span>Laravel</span><span>Node.js</span><span>Yii</span><span>REST API</span><span>MVC</span></div></div>
-          <div class="st reveal"><h4>CMS &amp; eCommerce</h4><div class="tags"><span>WordPress</span><span>WooCommerce</span><span>Shopify</span><span>Magento 2</span></div></div>
-          <div class="st reveal"><h4>Database</h4><div class="tags"><span>MySQL</span><span>SQLite</span><span>SQL</span><span>DB Design</span></div></div>
-          <div class="st reveal"><h4>Automation &amp; Markets</h4><div class="tags"><span>WhatsApp API</span><span>n8n</span><span>Noon</span><span>Amazon</span><span>Bayut</span><span>Google Ads</span></div></div>
-          <div class="st reveal"><h4>Tools &amp; Practices</h4><div class="tags"><span>Git</span><span>Jira</span><span>Linux</span><span>cPanel</span><span>Agile</span></div></div>
-        </div>
+      <div class="job rv">
+        <div class="when">AUG 2022 — NOV 2023</div>
+        <h4>Junior Software Engineer</h4>
+        <div class="co">Accuron Technologies · Infopark, India</div>
+        <ul>
+          <li>CRM applications for real-estate and distribution businesses.</li>
+          <li>Inventory and workflow modules for the Vango B2B platform; secure role-based access.</li>
+        </ul>
       </div>
-    </section>
-
-    <section id="work">
-      <div class="wrap">
-        <div class="s-head reveal">
-          <div class="eyebrow">Experience</div>
-          <h2>Development and commercial ops, side by side</h2>
-          <p>Three roles, read like a commit history — most recent first.</p>
-        </div>
-        <div class="log reveal">
-          <div class="commit head">
-            <div class="c-line"><span class="hash">a1c2026</span> · Jan 2026 — present <span class="ref">(HEAD → main, origin/uaa)</span></div>
-            <h3>Full-Stack / Ecommerce Backend Developer</h3>
-            <span class="co">United Arab Agencies · Dubai, UAE</span>
-            <ul>
-              <li>Rebuilt the uaa.ae website on Laravel.</li>
-              <li>Built a solo WhatsApp + AI-voice lead-automation platform (Node/TypeScript, n8n).</li>
-              <li>Run Noon UAE &amp; Amazon.ae listings and sponsored ads.</li>
-              <li>Manage Bayut listings and Google Ads for Deira property.</li>
-            </ul>
-          </div>
-          <div class="commit">
-            <div class="c-line"><span class="hash">7f4d925</span> · Dec 2023 — Sep 2025</div>
-            <h3>Software Engineer L2</h3>
-            <span class="co">Zerone Consultancy · Infopark, India</span>
-            <ul>
-              <li>Developed and maintained enterprise Magento 2 platforms for international clients.</li>
-              <li>Built custom Magento 2 modules for booking and product-lifecycle management.</li>
-              <li>Contributed to PropTech architecture supporting 64+ real-estate websites.</li>
-            </ul>
-          </div>
-          <div class="commit">
-            <div class="c-line"><span class="hash">3b90a22</span> · Aug 2022 — Nov 2023</div>
-            <h3>Junior Software Engineer</h3>
-            <span class="co">Accuron Technologies · Infopark, India</span>
-            <ul>
-              <li>Developed CRM applications for real-estate and distribution businesses.</li>
-              <li>Implemented CRUD systems and role-based access-control frameworks.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrap">
-        <div class="s-head reveal">
-          <div class="eyebrow">Projects</div>
-          <h2>Platforms I've built and kept running</h2>
-        </div>
-        <div class="feat reveal">
-          <span class="tag">Featured · Solo build</span>
-          <h3>UAA Lead-Automation Platform</h3>
-          <p>A WhatsApp &amp; AI-voice automation engine for property leads: a dynamic question flow qualifies each lead HOT / WARM / COLD, searches live inventory, and hands off to an agent — with n8n orchestrating notifications and follow-ups. Built end to end on Node.js &amp; TypeScript.</p>
-          <div class="tags"><span>Node.js</span><span>TypeScript</span><span>WhatsApp Cloud API</span><span>AI Voice</span><span>n8n</span><span>SQLite</span></div>
-        </div>
-        <div class="proj">
-          <div class="pc reveal"><div class="pt"><span class="tag">Laravel Rebuild</span><a class="visit" href="https://uaa.ae/" target="_blank" rel="noopener">visit ↗</a></div><h3>United Arab Agencies</h3><p>Rebuilt the company website on Laravel — a Dubai real-estate agency operating since 1964.</p><div class="sl">Laravel · MySQL</div></div>
-          <div class="pc reveal"><div class="pt"><span class="tag">WordPress · Solo</span><a class="visit" href="https://baniyasoasiselectronics.com/" target="_blank" rel="noopener">visit ↗</a></div><h3>Baniyas Oasis Electronics</h3><p>Full eCommerce build delivered independently end to end, with Stripe integration and catalog setup.</p><div class="sl">WordPress · WooCommerce · Stripe</div></div>
-          <div class="pc reveal"><div class="pt"><span class="tag">Full Stack</span><a class="visit" href="https://ipureherbs.org/" target="_blank" rel="noopener">visit ↗</a></div><h3>iPure Herbs</h3><p>Herbal-supplements platform on Laravel 12 and Next.js 15, owned end to end: catalog, orders, operations.</p><div class="sl">Laravel 12 · Next.js 15 · MySQL · Stripe</div></div>
-          <div class="pc reveal"><div class="pt"><span class="tag">Backend Lead</span><a class="visit" href="https://www.acer.com/au-en" target="_blank" rel="noopener">visit ↗</a></div><h3>Acer Australia</h3><p>Enterprise Magento 2 platform — production support, module development and performance optimization.</p><div class="sl">Magento 2 · REST API · MySQL</div></div>
-          <div class="pc reveal"><div class="pt"><span class="tag">PropTech</span><a class="visit" href="https://www.proxima.com.au/" target="_blank" rel="noopener">visit ↗</a></div><h3>Proxima</h3><p>Real-estate reservation platform across Australia &amp; Indonesia — 64+ sub-sites, commission system, catalog.</p><div class="sl">Magento 2 · Mobile API · Multi-Store</div></div>
-          <div class="pc reveal"><div class="pt"><span class="tag">eCommerce</span><a class="visit" href="https://www.caravel.qa/products" target="_blank" rel="noopener">visit ↗</a></div><h3>Caravel Qatar</h3><p>Enterprise eCommerce product catalog and storefront for an international retail client.</p><div class="sl">Magento 2 · Catalog Management</div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="wrap">
-        <div class="contact reveal">
-          <div class="eyebrow">Contact</div>
-          <h2>Have a build in mind?</h2>
-          <p>Open to freelance and contract work — Laravel, Next.js, WordPress or Shopify builds, WhatsApp automation, and Noon / Amazon / Bayut listing growth.</p>
-          <div class="cta">
-            <a href="mailto:ancymol.softwaredev@gmail.com" class="btn btn-primary">Email me</a>
-            <a href="tel:+971561835793" class="btn btn-ghost">+971 56 183 5793</a>
-            <a href="https://www.linkedin.com/in/ancy-mol-31ba11220" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn ↗</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="wrap">
-      <p class="fb">
-        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M9 22 L16 9 L23 22" stroke="var(--accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.2 17 H19.8" stroke="var(--accent-2)" stroke-width="2.4" stroke-linecap="round"/></svg>
-        © 2026 Ancy Mol KK · built from scratch
-      </p>
-      <div>
-        <a href="mailto:ancymol.softwaredev@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/ancy-mol-31ba11220" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="#top">Back to top ↑</a>
+      <div class="job rv" style="margin-bottom:0">
+        <div class="when">2022</div>
+        <h4>B.Sc. Computer Science</h4>
+        <div class="co">MG University, Kerala · plus 1.5 yrs as Chegg Expert Tutor (algorithms &amp; databases)</div>
       </div>
     </div>
-  </footer>
-</div>
-
-<div class="cmdk" id="cmdk">
-  <div class="palette" role="dialog" aria-label="Command palette">
-    <input id="cmdInput" type="text" placeholder="Type a command or search…  (try: projects, email, theme)" autocomplete="off" spellcheck="false">
-    <div class="plist" id="plist"></div>
-    <div class="pfoot"><span><kbd>↑↓</kbd> navigate</span><span><kbd>↵</kbd> select</span><span><kbd>esc</kbd> close</span></div>
   </div>
-</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">// Toolkit</div>
+      <h2>What I work with</h2>
+    </div>
+    <div class="skills">
+      <div class="sk rv"><h5>⚙️ Backend</h5><div><span>PHP</span><span>Laravel</span><span>Magento 2</span><span>Yii</span><span>Node.js</span><span>REST APIs</span><span>MySQL</span><span>Oracle</span></div></div>
+      <div class="sk rv"><h5>🎨 Frontend</h5><div><span>Next.js</span><span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span><span>WordPress</span></div></div>
+      <div class="sk rv"><h5>🤖 Automation &amp; AI</h5><div><span>n8n</span><span>WhatsApp Cloud API</span><span>AI workflows</span><span>Chatbots</span><span>Lead scoring</span><span>CRM</span></div></div>
+      <div class="sk rv"><h5>🛒 Ecommerce</h5><div><span>Stripe</span><span>PayTabs</span><span>Tabby</span><span>Tamara</span><span>Aramex / DHL</span><span>Klaviyo</span><span>Noon</span><span>Bayut</span></div></div>
+    </div>
+    <p class="sub rv" style="margin-top:30px">Also: Git, Linux, Apache, Postman, Jira, Azure, cPanel, GoDaddy · Languages: English, Malayalam, Tamil, Hindi, Arabic</p>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="wrap rv">
+    <div class="eyebrow">// Let's talk</div>
+    <h2>Looking for a developer who can build it <em class="gold" style="font-style:normal">end to end?</em></h2>
+    <p class="sub">I'm based in Dubai and can join immediately. Happy to walk you through any of these projects live.</p>
+    <div class="cta">
+      <a href="mailto:ancymol.softwaredev@gmail.com?subject=Opportunity%20for%20Ancymol" class="btn btn-gold">Email me</a>
+      <a href="https://wa.me/971561835793" target="_blank" rel="noopener" class="btn btn-ghost">💬 WhatsApp</a>
+      <a href="assets/Ancymol_KK_CV.pdf" class="btn btn-ghost" download>Download CV</a>
+    </div>
+    <div class="cards">
+      <a class="cc" href="mailto:ancymol.softwaredev@gmail.com"><div class="ic">✉️</div><div><small>Email</small><b>ancymol.softwaredev@gmail.com</b></div></a>
+      <a class="cc" href="tel:+971561835793"><div class="ic">📞</div><div><small>Phone</small><b>+971 56 183 5793</b></div></a>
+      <a class="cc" href="https://www.linkedin.com/in/ancy-mol-31ba11220" target="_blank" rel="noopener"><div class="ic">in</div><div><small>LinkedIn</small><b>ancy-mol-31ba11220</b></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Ancymol KK · Full Stack &amp; Automation Developer · Dubai, UAE</footer>
 
 <script>
+// typing roles
 (function(){
-  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var root = document.documentElement;
+  var roles=["WhatsApp & AI Automation","Laravel & Next.js","Magento 2 Ecommerce","Real-Estate Lead Systems","n8n Workflows"];
+  var el=document.getElementById('typed'),i=0,j=roles[0].length,del=true;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  setTimeout(function tick(){
+    var w=roles[i];
+    if(del){ j--; if(j<=0){del=false;i=(i+1)%roles.length;} }
+    else { j++; if(j>=roles[i].length){del=true; el.textContent=roles[i]; return setTimeout(tick,1800);} }
+    el.textContent=roles[i].slice(0,Math.max(j,0));
+    setTimeout(tick,del?35:70);
+  },2200);
+})();
 
-  /* theme */
-  function stored(){try{return localStorage.getItem('theme')}catch(e){return null}}
-  function save(v){try{localStorage.setItem('theme',v)}catch(e){}}
-  var init = stored(); if(init) root.setAttribute('data-theme', init);
-  function currentDark(){var t=root.getAttribute('data-theme');return t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;}
-  function toggleTheme(){var next=currentDark()?'light':'dark';root.setAttribute('data-theme',next);save(next);}
-  document.getElementById('themeBtn').addEventListener('click', toggleTheme);
+// reveal on scroll + counters
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
+  var co=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(!e.isIntersecting)return; co.unobserve(e.target);
+    var n=e.target,t=+n.dataset.count,s=n.dataset.suffix||'',k=0,st=Math.max(1,Math.ceil(t/30));
+    var h=setInterval(function(){k=Math.min(t,k+st);n.textContent=k+s;if(k>=t)clearInterval(h);},40);
+  })},{threshold:.5});
+  document.querySelectorAll('[data-count]').forEach(function(n){co.observe(n)});
+})();
 
-  /* clock */
-  var clock=document.getElementById('clock');
-  function tick(){try{clock.textContent=new Date().toLocaleTimeString('en-GB',{timeZone:'Asia/Dubai',hour12:false})+' GST';}catch(e){clock.textContent=new Date().toLocaleTimeString();}}
-  tick(); setInterval(tick,1000);
-
-  /* progress + spotlight */
-  var prog=document.getElementById('progress');
-  window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;prog.style.width=(h>0?(window.scrollY/h*100):0)+'%';},{passive:true});
-  if(!reduce){var spot=document.getElementById('spot');
-    window.addEventListener('pointermove',function(e){if(e.pointerType==='touch'){spot.style.opacity=0;return;}spot.style.left=e.clientX+'px';spot.style.top=e.clientY+'px';spot.style.opacity=.5;},{passive:true});}
-
-  /* reveal */
-  var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
-  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-
-  /* count-up */
-  var seen=false;
-  var so=new IntersectionObserver(function(en){en.forEach(function(e){
-    if(e.isIntersecting&&!seen){seen=true;document.querySelectorAll('[data-count]').forEach(function(el){
-      var target=+el.getAttribute('data-count'),t0=null,dur=1100;
-      if(reduce){el.textContent=target;return;}
-      function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e2=1-Math.pow(1-p,3);el.textContent=Math.round(e2*target);if(p<1)requestAnimationFrame(step);}
-      requestAnimationFrame(step);});}
-  });},{threshold:.4});
-  so.observe(document.getElementById('stats'));
-
-  /* ===== network canvas ===== */
-  (function(){
-    var cv=document.getElementById('net'),ctx=cv.getContext('2d'),w,h,dpr,nodes=[],mouse={x:-9999,y:-9999},raf;
-    function cols(){var cs=getComputedStyle(root);return{a:cs.getPropertyValue('--net-a').trim(),b:cs.getPropertyValue('--net-b').trim()};}
-    var C=cols();
-    function resize(){dpr=Math.min(window.devicePixelRatio||1,2);w=cv.width=innerWidth*dpr;h=cv.height=innerHeight*dpr;cv.style.width=innerWidth+'px';cv.style.height=innerHeight+'px';
-      var count=Math.min(64,Math.floor(innerWidth*innerHeight/22000));nodes=[];
-      for(var i=0;i<count;i++){nodes.push({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.18*dpr,vy:(Math.random()-.5)*.18*dpr,r:(Math.random()*1.6+.8)*dpr,c:Math.random()>.5});}}
-    function draw(){
-      ctx.clearRect(0,0,w,h);var maxd=140*dpr,mx=mouse.x*dpr,my=mouse.y*dpr;
-      for(var i=0;i<nodes.length;i++){var n=nodes[i];n.x+=n.vx;n.y+=n.vy;
-        if(n.x<0||n.x>w)n.vx*=-1; if(n.y<0||n.y>h)n.vy*=-1;
-        var dx=n.x-mx,dy=n.y-my,dm=Math.sqrt(dx*dx+dy*dy);
-        if(dm<130*dpr&&dm>0){n.x+=dx/dm*.6;n.y+=dy/dm*.6;}
-        for(var j=i+1;j<nodes.length;j++){var m=nodes[j],ex=n.x-m.x,ey=n.y-m.y,d=Math.sqrt(ex*ex+ey*ey);
-          if(d<maxd){var a=(1-d/maxd)*.5;ctx.strokeStyle='rgba('+(n.c?C.a:C.b)+','+a.toFixed(3)+')';ctx.lineWidth=dpr*.6;ctx.beginPath();ctx.moveTo(n.x,n.y);ctx.lineTo(m.x,m.y);ctx.stroke();}}
-        ctx.fillStyle='rgba('+(n.c?C.a:C.b)+',.75)';ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,6.28);ctx.fill();}
-      raf=requestAnimationFrame(draw);
-    }
-    window.addEventListener('pointermove',function(e){mouse.x=e.clientX;mouse.y=e.clientY;},{passive:true});
-    window.addEventListener('resize',resize);
-    document.addEventListener('visibilitychange',function(){if(document.hidden){cancelAnimationFrame(raf);}else if(!reduce){raf=requestAnimationFrame(draw);}});
-    root.addEventListener('themechange',function(){C=cols();});
-    var _t=toggleTheme; // refresh colors after theme switch
-    document.getElementById('themeBtn').addEventListener('click',function(){setTimeout(function(){C=cols();},10);});
-    resize();
-    if(reduce){draw();cancelAnimationFrame(raf);ctx.clearRect(0,0,w,h);
-      // single static frame
-      for(var i=0;i<nodes.length;i++){var n=nodes[i];ctx.fillStyle='rgba('+(n.c?C.a:C.b)+',.5)';ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,6.28);ctx.fill();}
-    } else { raf=requestAnimationFrame(draw); }
-  })();
-
-  /* ===== interactive terminal ===== */
-  (function(){
-    var term=document.getElementById('term'),wrap=document.getElementById('termWrap');
-    function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-    function print(html){var d=document.createElement('div');d.className='ln';d.innerHTML=html;term.appendChild(d);term.scrollTop=term.scrollHeight;return d;}
-    var input,history=[],hi=-1;
-    function prompt(){
-      var line=document.createElement('div');line.className='ln inputline';
-      line.innerHTML='<span class="pr">ancy@dubai:~$</span> ';
-      input=document.createElement('input');input.className='cmdin';input.setAttribute('autocomplete','off');input.setAttribute('spellcheck','false');
-      line.appendChild(input);term.appendChild(line);term.scrollTop=term.scrollHeight;input.focus();
-      input.addEventListener('keydown',onKey);
-    }
-    function lock(){if(input){input.removeEventListener('keydown',onKey);input.disabled=true;input.classList.remove('cmdin');input.parentNode.querySelector('.pr').outerHTML='<span class="pr">ancy@dubai:~$</span>';
-      var v=input.value;input.outerHTML='<span class="cm">'+esc(v)+'</span>';}}
-    function onKey(e){
-      if(e.key==='Enter'){var v=input.value.trim();lock();if(v){history.push(v);hi=history.length;}run(v);prompt();}
-      else if(e.key==='ArrowUp'){e.preventDefault();if(hi>0){hi--;input.value=history[hi]||'';}}
-      else if(e.key==='ArrowDown'){e.preventDefault();if(hi<history.length-1){hi++;input.value=history[hi]||'';}else{hi=history.length;input.value='';}}
-      else if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='l'){e.preventDefault();term.innerHTML='';prompt();}
-    }
-    wrap.addEventListener('click',function(e){if(e.target.tagName!=='A'&&input)input.focus();});
-    var open=function(u){return function(){window.open(u,'_blank','noopener');return '<span class="ok">→ opening '+u+' …</span>';}};
-    var C={
-      help:function(){return '<span class="out">available commands</span>\n'+
-        '  <span class="key">about</span>       who I am\n'+
-        '  <span class="key">skills</span>      the stack I build on\n'+
-        '  <span class="key">services</span>    what I take on\n'+
-        '  <span class="key">projects</span>    platforms I\'ve shipped\n'+
-        '  <span class="key">experience</span>  work history\n'+
-        '  <span class="key">stats</span>       by the numbers\n'+
-        '  <span class="key">contact</span>     how to reach me\n'+
-        '  <span class="key">open</span> &lt;site&gt; uaa · baniyas · ipure · linkedin\n'+
-        '  <span class="key">theme</span>       switch light / dark\n'+
-        '  <span class="key">clear</span>       clear the screen\n'+
-        '<span class="mut">tip: ↑/↓ for history · ⌘K for the command palette</span>';},
-      about:function(){return '<span class="cm">Ancy Mol KK</span> — full-stack engineer, Dubai.\n<span class="out">I build the product AND run the storefront: Laravel/Next.js\nplatforms, WooCommerce/Shopify stores, plus Noon, Amazon.ae,\nBayut listings and WhatsApp + AI-voice lead automation.</span>';},
-      skills:function(){return '<span class="out">frontend </span> Next.js · React · JS · CSS3 · Bootstrap\n<span class="out">backend  </span> PHP · Laravel · Node.js · Yii · REST\n<span class="out">commerce </span> WooCommerce · Shopify · Magento 2\n<span class="out">data     </span> MySQL · SQLite · SQL\n<span class="out">automate </span> WhatsApp API · n8n · AI voice\n<span class="out">markets  </span> Noon · Amazon · Bayut · Google Ads';},
-      services:function(){return '01 Web app development\n02 eCommerce builds\n03 Marketplace growth\n04 Real-estate marketing\n<span class="ok">05 WhatsApp &amp; call automation  [new]</span>';},
-      projects:function(){return '<span class="ok">★ UAA Lead-Automation</span>  WhatsApp + AI voice · Node/TS\n  United Arab Agencies    Laravel rebuild · <a href="https://uaa.ae/" target="_blank" rel="noopener">uaa.ae</a>\n  Baniyas Oasis Elec.     WooCommerce · solo build\n  iPure Herbs             Laravel 12 + Next.js 15\n  Acer Australia          Magento 2 backend\n  Proxima                 PropTech · 64+ sites\n<span class="mut">type: open uaa · open ipure · open baniyas</span>';},
-      experience:function(){return '<span class="key">2026–now</span> Full-Stack/Ecom Backend · United Arab Agencies\n<span class="key">2023–25 </span> Software Engineer L2 · Zerone Consultancy\n<span class="key">2022–23 </span> Junior Software Engineer · Accuron Tech';},
-      stats:function(){return '4+  years shipping production\n7   flagship platforms built\n3   marketplace channels run\n5   languages spoken';},
-      contact:function(){return '<span class="out">email </span> <a href="mailto:ancymol.softwaredev@gmail.com">ancymol.softwaredev@gmail.com</a>\n<span class="out">phone </span> <a href="tel:+971561835793">+971 56 183 5793</a>\n<span class="out">in    </span> <a href="https://www.linkedin.com/in/ancy-mol-31ba11220" target="_blank" rel="noopener">linkedin.com/in/ancy-mol</a>';},
-      theme:function(){toggleTheme();setTimeout(function(){},0);return '<span class="ok">✓ theme switched</span>';},
-      clear:function(){term.innerHTML='';return null;},
-      whoami:function(){return '<span class="cm">ancy_mol_kk</span> <span class="mut">· uid=1000 · groups=engineering,commercial</span>';},
-      ls:function(){return 'about.md   skills.json   projects/   experience.log   contact.vcf';},
-      sudo:function(a){if((a||'').indexOf('hire')>-1)return '<span class="ok">✓ access granted.</span> <a href="mailto:ancymol.softwaredev@gmail.com">let\'s talk →</a>';return '<span class="warn">nice try 🙂  try: sudo hire-ancy</span>';},
-      coffee:function(){return '<span class="warn">☕  brewing… fuel for the next deploy.</span>';}
-    };
-    function run(raw){
-      if(!raw)return;var parts=raw.split(/\s+/),cmd=parts[0].toLowerCase(),arg=parts.slice(1).join(' ');
-      if(cmd==='open'){var map={uaa:'https://uaa.ae/',baniyas:'https://baniyasoasiselectronics.com/',ipure:'https://ipureherbs.org/',linkedin:'https://www.linkedin.com/in/ancy-mol-31ba11220'};
-        var u=map[(arg||'').toLowerCase()];if(u){print(open(u)());return;}print('<span class="warn">open: unknown site. try: uaa · baniyas · ipure · linkedin</span>');return;}
-      if(C[cmd]){var out=C[cmd](arg);if(out!==null&&out!==undefined)print(out);return;}
-      print('<span class="warn">command not found: '+esc(cmd)+'</span>  <span class="mut">type <span class="key">help</span></span>');
-    }
-    // boot
-    var boot=['<span class="mut">ancyOS 2.0 — portfolio shell</span>',
-      '<span class="out">booting… <span class="ok">ready</span></span>',
-      'type <span class="key">help</span> to explore, or just start typing.'];
-    if(reduce){boot.forEach(print);prompt();}
-    else{var bi=0;(function bootSeq(){if(bi<boot.length){print(boot[bi++]);setTimeout(bootSeq,360);}else{setTimeout(prompt,200);}})();}
-  })();
-
-  /* ===== command palette ===== */
-  var cmdk=document.getElementById('cmdk'),pin=document.getElementById('cmdInput'),plist=document.getElementById('plist');
-  var go=function(id){return function(){location.hash=id;}},ext=function(u){return function(){window.open(u,'_blank','noopener');}};
-  var commands=[
-    {g:'Navigate',ic:'▸',name:'About',sub:'#about',run:go('#about')},
-    {g:'Navigate',ic:'▸',name:'Pipeline',sub:'#pipeline',run:go('#pipeline')},
-    {g:'Navigate',ic:'▸',name:'Services',sub:'#services',run:go('#services')},
-    {g:'Navigate',ic:'▸',name:'Stack',sub:'#stack',run:go('#stack')},
-    {g:'Navigate',ic:'▸',name:'Experience',sub:'#work',run:go('#work')},
-    {g:'Navigate',ic:'▸',name:'Projects',sub:'#projects',run:go('#projects')},
-    {g:'Navigate',ic:'▸',name:'Contact',sub:'#contact',run:go('#contact')},
-    {g:'Actions',ic:'✦',name:'Toggle theme',sub:'light / dark',run:toggleTheme},
-    {g:'Actions',ic:'@',name:'Copy email',sub:'ancymol.softwaredev@gmail.com',run:function(){try{navigator.clipboard.writeText('ancymol.softwaredev@gmail.com');pin.value='';pin.placeholder='✓ email copied';}catch(e){location.href='mailto:ancymol.softwaredev@gmail.com';}}},
-    {g:'Reach out',ic:'✉',name:'Send email',sub:'mailto',run:ext('mailto:ancymol.softwaredev@gmail.com')},
-    {g:'Reach out',ic:'☎',name:'Call',sub:'+971 56 183 5793',run:ext('tel:+971561835793')},
-    {g:'Reach out',ic:'in',name:'LinkedIn',sub:'ancy-mol',run:ext('https://www.linkedin.com/in/ancy-mol-31ba11220')},
-    {g:'Reach out',ic:'↗',name:'Open uaa.ae',sub:'live site',run:ext('https://uaa.ae/')}
-  ];
-  var sel=0,filtered=commands.slice();
-  function draw(){var html='',lg='';filtered.forEach(function(c,i){if(c.g!==lg){html+='<div class="pgroup">'+c.g+'</div>';lg=c.g;}
-    html+='<div class="pitem'+(i===sel?' sel':'')+'" data-i="'+i+'"><span class="pi-ic">'+c.ic+'</span><span>'+c.name+'</span><span class="pi-sub">'+c.sub+'</span></div>';});
-    plist.innerHTML=html||'<div class="pgroup">no matches</div>';var s=plist.querySelector('.pitem.sel');if(s)s.scrollIntoView({block:'nearest'});}
-  function filter(){var q=pin.value.trim().toLowerCase();filtered=q?commands.filter(function(c){return (c.name+' '+c.sub+' '+c.g).toLowerCase().indexOf(q)>-1;}):commands.slice();sel=0;draw();}
-  function openK(){cmdk.classList.add('open');pin.value='';pin.placeholder='Type a command or search…';filter();setTimeout(function(){pin.focus();},20);}
-  function closeK(){cmdk.classList.remove('open');}
-  function runSel(){var c=filtered[sel];if(c){closeK();c.run();}}
-  document.getElementById('openK').addEventListener('click',openK);
-  pin.addEventListener('input',filter);
-  plist.addEventListener('click',function(e){var it=e.target.closest('.pitem');if(it){sel=+it.getAttribute('data-i');runSel();}});
-  cmdk.addEventListener('click',function(e){if(e.target===cmdk)closeK();});
-  document.addEventListener('keydown',function(e){
-    if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();cmdk.classList.contains('open')?closeK():openK();return;}
-    if(!cmdk.classList.contains('open'))return;
-    if(e.key==='Escape')closeK();
-    else if(e.key==='ArrowDown'){e.preventDefault();sel=Math.min(sel+1,filtered.length-1);draw();}
-    else if(e.key==='ArrowUp'){e.preventDefault();sel=Math.max(sel-1,0);draw();}
-    else if(e.key==='Enter'){e.preventDefault();runSel();}
-  });
+// WhatsApp chat playback
+(function(){
+  var chat=document.getElementById('chat'),items=chat.children,started=false;
+  function play(){
+    for(var k=0;k<items.length;k++) items[k].classList.remove('show');
+    Array.prototype.forEach.call(items,function(n,k){ setTimeout(function(){n.classList.add('show')},600+k*1100); });
+    setTimeout(play,600+items.length*1100+4000);
+  }
+  new IntersectionObserver(function(es,o){ if(es[0].isIntersecting && !started){started=true;o.disconnect();play();} },{threshold:.3}).observe(chat);
 })();
 </script>
-
 </body>
 </html>
