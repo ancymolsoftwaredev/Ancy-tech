@@ -298,6 +298,40 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
   .hero{text-align:left}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.msg,.btns,.hot{opacity:1;transform:none}.track{flex-wrap:wrap;width:auto;justify-content:center}}
+
+/* ===== Wood + cream theme ===== */
+:root{
+  --bg:#2e1d10; --bg2:#3a2615; --card:#46301c; --line:#6b4a2c;
+  --text:#f8efdc; --muted:#d6c2a2; --goldDim:#b88a3e;
+  --grain:repeating-linear-gradient(91deg,rgba(0,0,0,.10) 0 2px,transparent 2px 7px,rgba(255,214,160,.035) 7px 8px,transparent 8px 19px),
+          repeating-linear-gradient(89deg,rgba(0,0,0,.06) 0 1px,transparent 1px 41px);
+}
+body{background:var(--grain),linear-gradient(180deg,#3b2615,#2a1a0e 60%,#331f11);background-attachment:fixed}
+nav{background:rgba(52,33,18,.88);border-bottom-color:rgba(232,180,74,.25)}
+.stats,#experience,.contact{background-image:var(--grain)}
+.chip{background:rgba(70,47,27,.94)}
+.spot{background:var(--grain),linear-gradient(160deg,#4a3019,#2f1d0f)}
+.flow span{background:#563a22}
+.stack span{background:#563a22;color:#f1e2c6}
+.job ul{color:#eadbc0}
+.qv{background:rgba(46,29,16,.9)}
+.track span{color:#a98a63}
+
+/* cream bands */
+#about,#ai,#projects,#services,#skills{
+  --bg:#f7efe0; --bg2:#efe3cc; --card:#fffaf2; --line:#e4d3b3;
+  --text:#2f1e10; --muted:#6e573f; --gold:#9a6618; --gold2:#7e500d; --goldDim:#b88a3e;
+  background:radial-gradient(900px 500px at 85% 0%,rgba(232,180,74,.12),transparent 60%),var(--bg);color:var(--text)
+}
+#projects,#services{background:#f2e7d3}
+#about .card,#ai .cap,#projects .card,#services .pk,#skills .sk span,#about .facts div{box-shadow:0 6px 22px rgba(90,58,25,.08)}
+#projects .card:hover,#services .pk:hover,#ai .cap:hover{box-shadow:0 24px 50px rgba(90,58,25,.18),0 0 0 1px rgba(154,102,24,.25)}
+#projects .stack span,#services .stack span{background:#f1e4cc;color:#5a4128;border-color:#e2cfac}
+#services .pk li{color:#4f3b26}
+#services .pk.best{background:linear-gradient(170deg,#fff4dc,#fbe9c6);border-color:#c8963c;box-shadow:0 30px 70px rgba(154,102,24,.18)}
+#skills .sk span{background:#fff6e6;color:#4a3520}
+#projects .filters button.on{color:#fffaf0}
+.eyebrow::before{filter:none}
 </style>
 </head>
 <body>
