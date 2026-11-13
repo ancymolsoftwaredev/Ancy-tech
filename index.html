@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Ancymol KK — Full Stack & Automation Developer</title>
-<meta name="description" content="Ancymol KK — Full Stack Developer in Dubai. Ecommerce (Magento 2, Laravel, Next.js) and AI / WhatsApp automation for real estate and retail. Available to join immediately.">
-<meta property="og:title" content="Ancymol KK — Full Stack & Automation Developer, Dubai">
-<meta property="og:description" content="I build ecommerce platforms and automations that turn leads into customers.">
+<title>Ancymol KK — AI Automation Engineer & Full Stack Developer</title>
+<meta name="description" content="Ancymol KK — AI Automation Engineer and Full Stack Developer in Dubai. AI chatbots, WhatsApp automation and CRM systems for real estate; e-commerce on Next.js, Laravel and Magento 2 for brands in the UAE, Australia and Qatar. UAE employment visa, available to join immediately.">
+<meta property="og:title" content="Ancymol KK — AI Automation Engineer & Full Stack Developer, Dubai">
+<meta property="og:description" content="AI chatbots, WhatsApp automation, CRM systems and e-commerce platforms — 14 shipped projects (9 e-commerce) across the UAE, Australia, Qatar and Indonesia.">
 <meta property="og:image" content="assets/profile.webp">
 <link rel="icon" href="assets/profile.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,7 +43,7 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .nav-cta{padding:9px 18px}
 
 /* hero */
-.hero{overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:110px 0 60px;position:relative;
+.hero{overflow:hidden;min-height:100vh;display:flex;align-items:center;padding:140px 0 60px;position:relative;
   background:radial-gradient(900px 600px at 78% 40%,rgba(232,180,74,.13),transparent 60%),radial-gradient(600px 400px at 10% 90%,rgba(232,180,74,.06),transparent 60%)}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(232,180,74,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(232,180,74,.04) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%);pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center;position:relative}
@@ -84,7 +84,12 @@ h1 em{font-style:normal;background:linear-gradient(120deg,var(--gold2),var(--gol
 
 /* sections */
 section{padding:110px 0}
-.eyebrow{font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:13px;letter-spacing:2px;text-transform:uppercase}
+.eyebrow{font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:13px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";flex:0 0 auto;width:34px;height:10px;background:radial-gradient(circle at 5px 5px,var(--gold) 4px,transparent 4.5px),radial-gradient(circle at 17px 5px,transparent 2.6px,var(--gold) 3px,var(--gold) 4px,transparent 4.5px),radial-gradient(circle at 29px 5px,rgba(232,180,74,.35) 4px,transparent 4.5px)}
+.avail{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.avail span{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:600;background:var(--card);border:1px solid var(--line)}
+.avail span i{width:9px;height:9px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 3px rgba(232,180,74,.18)}
+.avail span.g i{background:var(--green);box-shadow:0 0 0 3px rgba(37,211,102,.2)}
 h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);line-height:1.15;margin-top:10px}
 .sub{color:var(--muted);max-width:620px;margin-top:14px;font-size:16.5px}
 .head{margin-bottom:56px}
@@ -150,6 +155,77 @@ h2{font-family:'Playfair Display',serif;font-size:clamp(32px,4vw,48px);line-heig
 .card:hover .view svg{transform:translateX(4px)}
 .card.wide{grid-column:span 2}
 .card.wide .shot{height:180px}
+.card.hide{display:none}
+.card.full{grid-column:1/-1}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:-26px 0 34px}
+.filters button{font:inherit;font-size:13.5px;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--muted);cursor:pointer;transition:.2s}
+.filters button:hover{color:var(--gold);border-color:var(--goldDim)}
+.filters button.on{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1306;border-color:transparent}
+.filters button small{opacity:.7;margin-left:4px}
+
+/* AI capabilities */
+.caps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cap{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.3s}
+.cap:hover{border-color:rgba(232,180,74,.45);transform:translateY(-4px)}
+.cap .ci{width:46px;height:46px;border-radius:13px;background:rgba(232,180,74,.12);display:grid;place-items:center;font-size:22px;margin-bottom:16px}
+.cap h4{font-size:17.5px;margin-bottom:8px}
+.cap p{color:var(--muted);font-size:14.5px}
+.cap .mono{display:block;margin-top:14px;font-size:11.5px;color:var(--goldDim)}
+
+/* announcement bar (store-style) */
+.announce{height:34px;display:flex;align-items:center;justify-content:center;gap:18px;font-size:12.5px;font-weight:500;color:#1a1306;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold));overflow:hidden;white-space:nowrap}
+.announce a{text-decoration:underline;text-underline-offset:3px;font-weight:700}
+.announce .sep{opacity:.45}
+
+/* brand ticker */
+.ticker{border-bottom:1px solid var(--line);background:var(--bg);padding:26px 0;overflow:hidden;position:relative}
+.ticker::before,.ticker::after{content:"";position:absolute;top:0;bottom:0;width:120px;z-index:1;pointer-events:none}
+.ticker::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.ticker::after{right:0;background:linear-gradient(-90deg,var(--bg),transparent)}
+.ticker small{display:block;text-align:center;font-family:'JetBrains Mono',monospace;font-size:11.5px;letter-spacing:2px;color:var(--muted);text-transform:uppercase;margin-bottom:16px}
+.track{display:flex;width:max-content;animation:marquee 38s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.track span{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:#5d5444;padding:0 34px;display:flex;align-items:center;gap:34px;transition:.2s}
+.track span::after{content:"✦";font-size:13px;color:var(--goldDim)}
+.track span:hover{color:var(--gold)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* store-style project cards */
+.ribbon{position:absolute;top:12px;left:72px;z-index:2;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:4px 10px;border-radius:6px;display:inline-flex;align-items:center;gap:6px}
+.ribbon.live{background:rgba(37,211,102,.16);color:#9ff0bd;border:1px solid rgba(37,211,102,.4)}
+.ribbon.live::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--green)}
+.ribbon.priv{background:rgba(255,255,255,.08);color:#d9cdb5;border:1px solid rgba(255,255,255,.18)}
+.qv{position:absolute;left:50%;top:50%;z-index:3;transform:translate(-50%,-30%);opacity:0;transition:.3s;background:rgba(11,10,8,.85);border:1px solid var(--gold);color:var(--gold2);font-size:13px;font-weight:700;padding:10px 18px;border-radius:999px;backdrop-filter:blur(6px);white-space:nowrap}
+.card:hover .qv{opacity:1;transform:translate(-50%,-50%)}
+.card .shot::before{transition:transform .6s ease}
+.card:hover .shot::before{transform:scale(1.08)}
+
+/* service packages */
+.pk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.pk{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px 26px;display:flex;flex-direction:column;position:relative;transition:.3s}
+.pk:hover{transform:translateY(-6px);border-color:rgba(232,180,74,.45)}
+.pk.best{background:linear-gradient(170deg,#211a0e,#15120c);border-color:var(--gold);box-shadow:0 30px 70px rgba(232,180,74,.12)}
+.pk .flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1a1306;font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;padding:5px 14px;border-radius:999px;white-space:nowrap}
+.pk .pi{font-size:30px}
+.pk h4{font-family:'Playfair Display',serif;font-size:24px;margin:12px 0 6px}
+.pk .for{color:var(--muted);font-size:14.5px}
+.pk ul{list-style:none;margin:20px 0 26px;display:grid;gap:10px;flex:1}
+.pk li{display:flex;gap:10px;font-size:14.5px;color:#cfc6b6}
+.pk li::before{content:"✓";color:var(--gold);font-weight:700}
+.pk .btn{justify-content:center}
+.btn-wa{background:var(--green);color:#06210f;box-shadow:0 8px 26px rgba(37,211,102,.25)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(37,211,102,.4)}
+
+/* floating WhatsApp */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;align-items:center;gap:10px}
+.wa-float .lbl{background:#fff;color:#0b141a;font-size:13.5px;font-weight:600;padding:9px 14px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.35);opacity:0;transform:translateX(8px);transition:.3s;pointer-events:none;white-space:nowrap}
+.wa-float:hover .lbl,.wa-float.peek .lbl{opacity:1;transform:none}
+.wa-btn{width:60px;height:60px;border-radius:50%;background:#25d366;display:grid;place-items:center;box-shadow:0 12px 30px rgba(37,211,102,.45);position:relative;transition:.25s}
+.wa-btn:hover{transform:scale(1.08)}
+.wa-btn::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:waRing 2.2s ease-out infinite}
+@keyframes waRing{from{transform:scale(1);opacity:.8}to{transform:scale(1.6);opacity:0}}
+.wa-btn svg{width:32px;height:32px}
+.wa-btn .n{position:absolute;top:-2px;right:-2px;width:20px;height:20px;border-radius:50%;background:#ff3b30;color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;border:2px solid var(--bg)}
 
 /* experience */
 .timeline{position:relative;max-width:860px}
@@ -192,7 +268,8 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
   .hero-grid,.spot{grid-template-columns:1fr}
   .portrait{order:-1;width:min(300px,78vw);margin-top:10px}
   .chip.c1{left:-6%}.chip.c2{left:-8%}.chip.c3{right:-6%}
-  .grid{grid-template-columns:1fr 1fr}
+  .grid,.caps{grid-template-columns:1fr 1fr}
+  .pk-grid{grid-template-columns:1fr;max-width:560px;margin:0 auto;gap:30px}
   .card.wide{grid-column:span 2}
   .skills{grid-template-columns:1fr 1fr}
   .spot{padding:36px 26px}
@@ -205,7 +282,14 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
   .stats .wrap{grid-template-columns:1fr 1fr}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .grid,.skills,.cards{grid-template-columns:1fr}
+  .grid,.skills,.cards,.caps,.pk-grid{grid-template-columns:1fr}
+  .pk-grid{gap:30px}
+  .announce .hide-sm{display:none}
+  .track span{font-size:21px;padding:0 22px;gap:22px}
+  .wa-float{right:16px;bottom:16px}
+  .wa-btn{width:54px;height:54px}
+  .wa-float .lbl{display:none}
+  .filters{margin:-30px 0 26px}
   .card.wide{grid-column:auto}
   .chip{font-size:11px;padding:7px 10px}.chip b{font-size:15px}
   .chip.c1{left:-4%}.chip.c2{left:-4%}.chip.c3{right:-4%}
@@ -213,18 +297,25 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
   .spot h3{font-size:26px}
   .hero{text-align:left}
 }
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.msg,.btns,.hot{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.msg,.btns,.hot{opacity:1;transform:none}.track{flex-wrap:wrap;width:auto;justify-content:center}}
 </style>
 </head>
 <body>
 
 <nav>
+  <div class="announce">
+    <span>✦ Immediate joiner · UAE Employment Visa · Dubai</span>
+    <span class="sep hide-sm">|</span>
+    <span class="hide-sm">Free live walkthrough of any project — <a href="https://wa.me/971561835793?text=Hi%20Ancymol%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20a%20walkthrough." target="_blank" rel="noopener">book on WhatsApp</a></span>
+  </div>
   <div class="wrap">
     <a href="#top" class="logo">Ancymol<span>.</span></a>
     <div class="links">
       <a href="#about">About</a>
-      <a href="#automation">Automation</a>
+      <a href="#ai">AI &amp; Automation</a>
+      <a href="#automation">Featured</a>
       <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
     </div>
@@ -236,15 +327,16 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
 <header class="hero" id="top">
   <div class="wrap hero-grid">
     <div>
-      <div class="badge"><span class="dot"></span>Dubai, UAE · Available to join immediately</div>
-      <h1>Hi, I'm Ancymol.<br>I build systems that <em>turn leads into customers.</em></h1>
-      <p class="role">Full Stack Developer — <span class="typed" id="typed">WhatsApp &amp; AI Automation</span><span class="caret"></span></p>
-      <p class="lead">4 years shipping <b>ecommerce platforms</b> (Magento 2, Laravel, Next.js) and <b>business automation</b> for brands like <b>Acer Australia</b> and <b>Proxima</b> real estate. In Dubai I build end-to-end — from the company website to a WhatsApp bot that answers property leads at 2&nbsp;AM.</p>
+      <div class="badge"><span class="dot"></span>Available to join immediately · UAE Employment Visa</div>
+      <h1>Hi, I'm Ancymol.<br>I build <em>AI automation</em> that turns leads into customers.</h1>
+      <p class="role">AI Automation Engineer &amp; Full Stack Developer — <span class="typed" id="typed">AI Chatbots &amp; WhatsApp</span><span class="caret"></span></p>
+      <p class="lead">4 years building <b>AI-powered automation</b>, <b>CRM systems</b> and <b>e-commerce platforms</b> end to end with React, Next.js, Laravel and Node.js. In Dubai I designed and built the <b>uaa.ae</b> website and its <b>Rental Operating System</b> — an AI chatbot that answers Bayut, Dubizzle and website leads on WhatsApp in seconds, recovers missed calls and tracks every enquiry. Before that: enterprise platforms for <b>Acer Australia</b>, <b>Foxtel</b>, <b>Caravel Qatar</b> and <b>Proxima</b>.</p>
       <div class="cta">
         <a href="#projects" class="btn btn-gold">View my projects
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         <a href="assets/Ancymol_KK_CV.pdf" class="btn btn-ghost" download>Download CV</a>
       </div>
+      <div class="avail"><span class="g"><i></i>Immediate joiner</span><span><i></i>UAE Employment Visa</span><span><i></i>4 yrs experience</span></div>
       <div class="meta">
         <span>✉️ ancymol.softwaredev@gmail.com</span>
         <span>📞 +971 56 183 5793</span>
@@ -253,8 +345,8 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
     <div class="portrait">
       <div class="ring"></div>
       <img src="assets/profile.webp" alt="Ancymol KK, Full Stack Developer" width="420" height="420">
-      <div class="chip c1"><b>4+ yrs</b>Full stack</div>
-      <div class="chip c2"><b>64+</b>real-estate sites</div>
+      <div class="chip c1"><b>AI</b>chatbot &amp; CRM</div>
+      <div class="chip c2"><b>14</b>projects shipped</div>
       <div class="chip c3"><b>24/7</b>lead replies</div>
     </div>
   </div>
@@ -264,9 +356,18 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
 <div class="stats">
   <div class="wrap">
     <div class="stat"><b data-count="4">0</b><span>Years experience<br>(India + UAE)</span></div>
+    <div class="stat"><b data-count="14">0</b><span>Projects shipped —<br>9 of them e-commerce</span></div>
+    <div class="stat"><b data-count="4">0</b><span>Countries: UAE, Australia,<br>Qatar, Indonesia</span></div>
     <div class="stat"><b data-count="64" data-suffix="+">0</b><span>Real-estate websites<br>supported (Proxima)</span></div>
-    <div class="stat"><b data-count="6">0</b><span>Days to ship a full<br>ecommerce store</span></div>
-    <div class="stat"><b data-count="10" data-suffix="+">0</b><span>Payment, shipping &amp;<br>marketplace integrations</span></div>
+  </div>
+</div>
+
+<!-- BRAND TICKER -->
+<div class="ticker" aria-label="Brands and platforms I've worked on">
+  <small>Brands &amp; platforms I've built for</small>
+  <div class="track">
+    <span>Acer</span><span>Foxtel</span><span>Caravel Qatar</span><span>Proxima</span><span>United Arab Agencies</span><span>iPure Herbs</span><span>ESSMI</span><span>AnzGlow</span><span>Baniyas Oasis</span><span>Pakitini</span>
+    <span aria-hidden="true">Acer</span><span aria-hidden="true">Foxtel</span><span aria-hidden="true">Caravel Qatar</span><span aria-hidden="true">Proxima</span><span aria-hidden="true">United Arab Agencies</span><span aria-hidden="true">iPure Herbs</span><span aria-hidden="true">ESSMI</span><span aria-hidden="true">AnzGlow</span><span aria-hidden="true">Baniyas Oasis</span><span aria-hidden="true">Pakitini</span>
   </div>
 </div>
 
@@ -274,12 +375,14 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
 <section id="about">
   <div class="wrap about">
     <div class="rv">
-      <div class="eyebrow">// About me</div>
-      <h2>Developer who owns the whole project</h2>
-      <p class="sub">I'm a Full Stack Developer based in Dubai with 4 years of experience — 3 in India on enterprise ecommerce for international brands, and 1 in the UAE building everything a growing company needs on my own: the website, the inventory system, online stores and the automations that answer customers around the clock.</p>
-      <p class="sub">I like taking a problem from a conversation with the business all the way to a live, working system — and I'm comfortable doing that without a big team behind me.</p>
+      <div class="eyebrow">About me</div>
+      <h2>An engineer who owns the whole system — from AI to checkout</h2>
+      <p class="sub">I'm an AI Automation Engineer and Full Stack Developer based in Dubai with 4 years of experience — 3 in India on enterprise e-commerce and PropTech for international brands, and the last year in the UAE building everything a growing real-estate company needs on my own: the uaa.ae website and admin panel, an AI chatbot and WhatsApp automation, a lead CRM, online stores and an inventory system.</p>
+      <p class="sub">I connect systems through REST APIs, webhooks and workflow tools like n8n, and I like taking a problem from a conversation with the business all the way to a live, measurable system — without needing a big team behind me.</p>
       <div class="facts">
-        <div><b>📍 Dubai, UAE</b>Available to join immediately</div>
+        <div><b>📍 Dubai, UAE</b>Immediate joiner — available now</div>
+        <div><b>🛂 UAE Employment Visa</b>Already in the UAE, no relocation needed</div>
+        <div><b>💼 4 years experience</b>India + UAE, international clients</div>
         <div><b>🎓 B.Sc. Computer Science</b>MG University, 2022</div>
         <div><b>🗣️ 5 languages</b>English, Malayalam, Tamil, Hindi, Arabic</div>
         <div><b>🤝 Beyond code</b>Hiring, interviewing &amp; user training</div>
@@ -288,27 +391,47 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
   </div>
 </section>
 
-<!-- AUTOMATION SPOTLIGHT -->
-<section id="automation">
+<!-- AI & AUTOMATION -->
+<section id="ai" style="padding-top:20px">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow">// Featured build</div>
-      <h2>A WhatsApp assistant for a<br>Dubai real-estate agency</h2>
+      <div class="eyebrow">AI &amp; Automation engineering</div>
+      <h2>What I automate for a business</h2>
+      <p class="sub">Not demos — systems running in production for a Dubai real-estate company, answering real customers every day.</p>
+    </div>
+    <div class="caps">
+      <div class="cap rv"><div class="ci">🤖</div><h4>AI chatbots that qualify leads</h4><p>Conversational flows that ask the right questions per property type, match the customer to real inventory and score them HOT / WARM / COLD.</p><span class="mono">LLM-enabled workflows · question engine</span></div>
+      <div class="cap rv"><div class="ci">💬</div><h4>WhatsApp Business automation</h4><p>Interactive buttons, lists and property cards on the Meta Cloud API, approved message templates, bilingual English / Arabic replies.</p><span class="mono">Meta WhatsApp Cloud API · templates</span></div>
+      <div class="cap rv"><div class="ci">📞</div><h4>Missed-call recovery</h4><p>A missed call on a property listing triggers a WhatsApp message to the caller automatically, so no tenant is lost after hours.</p><span class="mono">Bayut leads · business-hours rules</span></div>
+      <div class="cap rv"><div class="ci">🔗</div><h4>Multi-channel lead capture</h4><p>Bayut, Dubizzle and website enquiries land in one CRM, merged by phone number, so nobody contacts the same customer twice.</p><span class="mono">REST APIs · webhooks · sync jobs</span></div>
+      <div class="cap rv"><div class="ci">⚙️</div><h4>Workflow orchestration</h4><p>Timed follow-ups, agent alerts and CRM events orchestrated with n8n, while the business logic stays in a tested Node.js API.</p><span class="mono">n8n · Node.js · TypeScript</span></div>
+      <div class="cap rv"><div class="ci">📊</div><h4>CRM dashboards &amp; accountability</h4><p>Live dashboards with roles and logins, an audit log, response-time stats and an owner view of which leads were (not) followed up.</p><span class="mono">RBAC · audit log · reporting</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTOMATION SPOTLIGHT -->
+<section id="automation" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Featured build</div>
+      <h2>UAA Rental Operating System —<br>AI automation for real estate</h2>
     </div>
     <div class="spot rv">
       <div>
-        <span class="tag">Live demo · Node.js · n8n · Meta WhatsApp Cloud API</span>
-        <h3>Every Bayut lead answered in seconds — in English or Arabic.</h3>
-        <p>Property leads arrive at all hours, and a missed call usually means a lost tenant. I designed and built the whole platform: a bot that qualifies the customer, matches them to real units, scores the lead and hands it to the right salesperson.</p>
+        <span class="tag">Live in production · Node.js · n8n · Meta WhatsApp Cloud API</span>
+        <h3>Every Bayut, Dubizzle and website lead answered in seconds — in English or Arabic.</h3>
+        <p>Property leads arrive at all hours, and a missed call usually means a lost tenant. For United Arab Agencies (74 units across 10 buildings) I designed and built the whole platform: an AI chatbot that qualifies the customer, matches them to real units, scores the lead and hands it to the right salesperson — with a CRM dashboard to track every enquiry.</p>
         <ul class="feat">
           <li>Smart question flow per property type (apartment, villa, office, shop)</li>
           <li>Reads the Bayut listing reference and skips questions it already knows</li>
           <li>Scores leads HOT / WARM / COLD and assigns an agent automatically</li>
           <li>Missed-call recovery and timed follow-ups orchestrated with n8n</li>
+          <li>Website enquiries from uaa.ae flow straight into the same CRM</li>
           <li>Team dashboard: chats, roles &amp; logins, audit log, owner accountability view</li>
         </ul>
         <div class="flow mono">
-          <span>Bayut lead</span><i>→</i><span>WhatsApp bot</span><i>→</i><span>Qualify</span><i>→</i><span>Match units</span><i>→</i><span>Agent + n8n</span>
+          <span>Bayut · Dubizzle · uaa.ae</span><i>→</i><span>AI chatbot on WhatsApp</span><i>→</i><span>Qualify</span><i>→</i><span>Match units</span><i>→</i><span>CRM + agent</span>
         </div>
         <div class="cta" style="margin-top:0">
           <a href="https://automation.c36.airoapp.ai/dashboard" target="_blank" rel="noopener" class="btn btn-gold">View live dashboard
@@ -340,61 +463,83 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
 <section id="projects" style="padding-top:20px">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow">// Selected work</div>
+      <div class="eyebrow">Selected work · 14 projects</div>
       <h2>Projects I've built &amp; shipped</h2>
-      <p class="sub">From solo builds in Dubai to enterprise platforms for international brands. Click any card to see it live.</p>
+      <p class="sub">14 projects — AI automation, real estate, 9 e-commerce stores and enterprise platforms. Here are 12 of them, from solo builds in Dubai to international brands in Australia, Qatar and Indonesia.</p>
     </div>
 
-    <div class="grid">
-      <a class="card wide rv" href="https://prototype-uaa.vercel.app/" target="_blank" rel="noopener">
-        <div class="shot" style="--g:linear-gradient(135deg,#3a2a0e,#8a6420 55%,#e8b44a)">
-          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🏙️</div>
-          <div class="big">United Arab Agencies<br>— new website</div>
+    <div class="filters rv" role="group" aria-label="Filter projects">
+      <button class="on" data-f="all">All <small>12</small></button>
+      <button data-f="ai">AI &amp; Automation</button>
+      <button data-f="realestate">Real estate</button>
+      <button data-f="ecom">E-commerce <small>9</small></button>
+      <button data-f="intl">International</button>
+    </div>
+
+    <div class="grid" id="pgrid">
+      <a class="card wide rv" data-cat="ai realestate" href="https://automation.c36.airoapp.ai/dashboard" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#0a2a22,#0f6b4f 55%,#25d366)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🤖</div>
+          <div class="big">UAA Rental<br>Operating System</div>
         </div>
         <div class="card-body">
-          <div class="where">Dubai · Solo build</div>
-          <h4>Real-estate company website &amp; property showcase</h4>
-          <p>A modern, fast website for a Dubai agency leasing 70+ units across 10 buildings — property listings, building pages and enquiry flows connected to WhatsApp. Designed, built and deployed on my own.</p>
-          <div class="stack"><span>Next.js</span><span>Laravel</span><span>Vercel</span><span>Responsive UI</span></div>
-          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <div class="where">Dubai · AI automation · Solo build</div>
+          <h4>AI chatbot, WhatsApp automation &amp; lead CRM</h4>
+          <p>Captures leads from Bayut, Dubizzle and uaa.ae, replies instantly through an AI chatbot on WhatsApp, recovers missed calls, scores and assigns every lead, and tracks follow-ups in a CRM dashboard with roles, audit log and owner reports.</p>
+          <div class="stack"><span>Node.js</span><span>TypeScript</span><span>WhatsApp Cloud API</span><span>n8n</span><span>MySQL</span><span>AI chatbot</span></div>
+          <span class="view">View live dashboard <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
 
-      <a class="card rv" href="https://ipureherbs.org" target="_blank" rel="noopener">
+      <a class="card rv" data-cat="realestate" href="https://uaa.ae/" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#3a2a0e,#8a6420 55%,#e8b44a)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🏙️</div>
+          <div class="big">uaa.ae</div>
+        </div>
+        <div class="card-body">
+          <div class="where">Dubai · Real estate · Solo build</div>
+          <h4>United Arab Agencies website &amp; admin panel</h4>
+          <p>Property listings, building pages and enquiry forms for 74 units across 10 buildings, with a Filament admin panel — enquiries feed the automation CRM.</p>
+          <div class="stack"><span>Next.js</span><span>Laravel</span><span>Filament</span><span>MySQL</span></div>
+          <span class="view">Visit uaa.ae <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card rv" data-cat="ecom" href="https://ipureherbs.org" target="_blank" rel="noopener">
         <div class="shot" style="--g:linear-gradient(135deg,#0f2a1a,#1f6b3f 60%,#7fcf8a)">
           <div class="browser"><i></i><i></i><i></i></div><div class="ico">🌿</div>
           <div class="big">iPure Herbs</div>
         </div>
         <div class="card-body">
-          <div class="where">UAE · Ecommerce</div>
+          <div class="where">UAE · Headless e-commerce</div>
           <h4>Herbal supplements store</h4>
-          <p>Full ecommerce with instant search, 4 payment gateways incl. buy-now-pay-later, international shipping and email marketing.</p>
-          <div class="stack"><span>Laravel 12</span><span>Next.js 15</span><span>Redis</span><span>Meilisearch</span><span>Stripe · Tabby · Tamara</span></div>
+          <p>Headless store with instant search, payments including buy-now-pay-later, international shipping and email marketing — 7 third-party integrations.</p>
+          <div class="stack"><span>Next.js 15</span><span>Laravel 12</span><span>Redis</span><span>Meilisearch</span><span>Stripe · Tabby · Tamara</span></div>
           <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
 
-      <a class="card rv" href="https://www.proxima.com.au" target="_blank" rel="noopener">
+      <a class="card rv" data-cat="realestate intl ai" href="https://www.proxima.com.au/" target="_blank" rel="noopener">
         <div class="shot" style="--g:linear-gradient(135deg,#0d1b2e,#1d4f80 60%,#4fa3d9)">
           <div class="browser"><i></i><i></i><i></i></div><div class="ico">🏘️</div>
           <div class="big">Proxima<br><small style="font-size:15px;font-family:Inter">Australia · Indonesia</small></div>
         </div>
         <div class="card-body">
-          <div class="where">PropTech · Team project</div>
-          <h4>Real-estate reservation platform — 64+ agent sites</h4>
+          <div class="where">International · PropTech</div>
+          <h4>Real-estate platform — 64+ agent sites</h4>
           <p>Shared architecture powering 64+ sub-agent websites, with mobile-app APIs, chatbot &amp; email automation, commission system and sales reporting.</p>
-          <div class="stack"><span>PHP</span><span>REST APIs</span><span>Automation</span><span>Multi-site</span></div>
+          <div class="stack"><span>PHP</span><span>REST APIs</span><span>Chatbot</span><span>Multi-site</span></div>
           <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
 
-      <a class="card rv" href="https://www.acer.com/au-en" target="_blank" rel="noopener">
+      <a class="card rv" data-cat="ecom intl" href="https://www.acer.com/ae-en/" target="_blank" rel="noopener">
         <div class="shot" style="--g:linear-gradient(135deg,#0d2614,#1d6b2e 60%,#83c341)">
           <div class="browser"><i></i><i></i><i></i></div><div class="ico">💻</div>
-          <div class="big">Acer Australia</div>
+          <div class="big">Acer</div>
         </div>
         <div class="card-body">
-          <div class="where">Enterprise · Backend lead</div>
+          <div class="where">International · Enterprise e-commerce</div>
           <h4>Large Magento 2 storefront</h4>
           <p>Custom modules, third-party API integrations, upgrades and performance tuning on a high-traffic multi-store platform.</p>
           <div class="stack"><span>Magento 2</span><span>PHP</span><span>MySQL</span><span>APIs</span></div>
@@ -402,35 +547,91 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
         </div>
       </a>
 
-      <a class="card rv" href="https://baniyasoasiselectronics.com/" target="_blank" rel="noopener">
+      <a class="card rv" data-cat="ecom intl" href="https://www.caravel.qa" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#2a0f14,#7a1f2e 60%,#d9586c)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🛍️</div>
+          <div class="big">Caravel Qatar</div>
+        </div>
+        <div class="card-body">
+          <div class="where">International · Qatar e-commerce</div>
+          <h4>Catalog &amp; storefront</h4>
+          <p>Catalog management and storefront development on a large Magento 2 platform, alongside Foxtel (Australia) on the same team.</p>
+          <div class="stack"><span>Magento 2</span><span>PHP</span><span>Catalog</span></div>
+          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card rv" data-cat="ecom" href="https://baniyasoasiselectronics.com/" target="_blank" rel="noopener">
         <div class="shot" style="--g:linear-gradient(135deg,#1b1030,#4b2a8a 60%,#a07ae8)">
           <div class="browser"><i></i><i></i><i></i></div><div class="ico">🔌</div>
           <div class="big">Baniyas Oasis<br>Electronics</div>
         </div>
         <div class="card-body">
           <div class="where">UAE · Built in 6 days</div>
-          <h4>Electronics ecommerce store</h4>
-          <p>Complete online store launched solo in 6 days, with Stripe payments plus Noon and Bayut marketplace listings.</p>
+          <h4>Electronics e-commerce store</h4>
+          <p>Complete online store launched solo in 6 days, with Stripe payments plus Noon marketplace listings.</p>
           <div class="stack"><span>WordPress</span><span>WooCommerce</span><span>Stripe</span><span>Noon</span></div>
           <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
 
-      <a class="card rv" href="https://www.caravel.qa" target="_blank" rel="noopener">
-        <div class="shot" style="--g:linear-gradient(135deg,#2a0f14,#7a1f2e 60%,#d9586c)">
-          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🛍️</div>
-          <div class="big">Caravel Qatar</div>
+      <a class="card rv" data-cat="ecom intl" href="https://www.foxtel.com.au" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#140a24,#3b1a6b 60%,#e2367a)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">📺</div>
+          <div class="big">Foxtel<br><small style="font-size:15px;font-family:Inter">Australia</small></div>
         </div>
         <div class="card-body">
-          <div class="where">Qatar · Ecommerce</div>
-          <h4>Catalog &amp; storefront</h4>
-          <p>Catalog management and storefront development on a large Magento platform.</p>
-          <div class="stack"><span>Magento 2</span><span>PHP</span><span>Catalog</span></div>
+          <div class="where">International · Enterprise e-commerce</div>
+          <h4>Magento 2 platform for an Australian media brand</h4>
+          <p>Custom modules, third-party API integrations, upgrades and production support on Foxtel's Magento 2 platform.</p>
+          <div class="stack"><span>Magento 2</span><span>Adobe Commerce</span><span>PHP</span><span>REST APIs</span></div>
           <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </div>
       </a>
 
-      <div class="card wide rv">
+      <a class="card rv" data-cat="ecom" href="https://www.essmi.ae" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#1f160a,#6b4a14 60%,#d9b066)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">💍</div>
+          <div class="big">ESSMI<br>Jewellery</div>
+        </div>
+        <div class="card-body">
+          <div class="where">UAE · Headless e-commerce</div>
+          <h4>Jewellery shop — off WordPress, onto Next.js</h4>
+          <p>Rebuilt the essmi.ae shop as a fast Next.js storefront that reads the existing product catalogue through the store API.</p>
+          <div class="stack"><span>Next.js 15</span><span>React 19</span><span>TypeScript</span><span>Store API</span></div>
+          <span class="view">Visit essmi.ae <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <a class="card rv" data-cat="ecom" href="https://anzglow.vercel.app" target="_blank" rel="noopener">
+        <div class="shot" style="--g:linear-gradient(135deg,#2a1810,#7a4a2a 60%,#f0d9b5)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">✨</div>
+          <div class="big">AnzGlow</div>
+        </div>
+        <div class="card-body">
+          <div class="where">UAE · Beauty e-commerce</div>
+          <h4>Beauty brand store with WhatsApp checkout</h4>
+          <p>Premium storefront with bag and checkout, PDF invoices, order emails via a serverless function and orders sent to WhatsApp.</p>
+          <div class="stack"><span>JavaScript</span><span>Vercel Functions</span><span>WhatsApp</span><span>PDF invoices</span></div>
+          <span class="view">View project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </div>
+      </a>
+
+      <div class="card rv" data-cat="ecom">
+        <div class="shot" style="--g:linear-gradient(135deg,#0a1f2a,#145a6b 60%,#4fd1c5)">
+          <div class="browser"><i></i><i></i><i></i></div><div class="ico">🛒</div>
+          <div class="big">Pakitini</div>
+        </div>
+        <div class="card-body">
+          <div class="where">UAE · Cash-on-delivery</div>
+          <h4>Single-product COD landing page</h4>
+          <p>High-converting product landing page with a cash-on-delivery order form and instant email order notifications.</p>
+          <div class="stack"><span>Next.js</span><span>Nodemailer</span><span>Vercel</span></div>
+          <span class="view" style="color:var(--muted)">Demo on request</span>
+        </div>
+      </div>
+
+      <div class="card full rv" data-cat="ecom">
         <div class="shot" style="--g:linear-gradient(135deg,#1e1a12,#4a3d22 60%,#a88a4a)">
           <div class="browser"><i></i><i></i><i></i></div><div class="ico">📦</div>
           <div class="big">Inventory<br>System</div>
@@ -447,23 +648,74 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
   </div>
 </section>
 
+<!-- SERVICES -->
+<section id="services" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head rv">
+      <div class="eyebrow">Hire me for</div>
+      <h2>Pick what your business needs</h2>
+      <p class="sub">Full-time role or a project — tell me on WhatsApp what you need and I'll reply with a plan.</p>
+    </div>
+    <div class="pk-grid">
+      <div class="pk rv">
+        <div class="pi">🛒</div>
+        <h4>E-commerce Store</h4>
+        <p class="for">For brands that want to sell online in the UAE and beyond.</p>
+        <ul>
+          <li>Next.js, Shopify, WooCommerce or Magento 2</li>
+          <li>Stripe, Tabby, Tamara, PayTabs or cash on delivery</li>
+          <li>Aramex / DHL shipping, Noon &amp; Amazon.ae</li>
+          <li>Instant search, invoices, email marketing</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/971561835793?text=Hi%20Ancymol%2C%20I%27m%20interested%20in%20an%20e-commerce%20store." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      </div>
+      <div class="pk best rv">
+        <span class="flag">Most requested</span>
+        <div class="pi">🤖</div>
+        <h4>AI Automation &amp; Chatbot</h4>
+        <p class="for">For teams losing leads to slow replies and missed calls.</p>
+        <ul>
+          <li>AI chatbot on WhatsApp, English &amp; Arabic</li>
+          <li>Leads from Bayut, Dubizzle, website &amp; forms in one CRM</li>
+          <li>Missed-call recovery &amp; automatic follow-ups</li>
+          <li>Lead scoring, agent assignment, owner reports</li>
+        </ul>
+        <a class="btn btn-wa" href="https://wa.me/971561835793?text=Hi%20Ancymol%2C%20I%27m%20interested%20in%20AI%20automation%20and%20a%20WhatsApp%20chatbot." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      </div>
+      <div class="pk rv">
+        <div class="pi">🏙️</div>
+        <h4>Full Stack Web App</h4>
+        <p class="for">For companies that need a website, portal or internal system.</p>
+        <ul>
+          <li>React / Next.js front end, Laravel or Node.js API</li>
+          <li>Admin panels, dashboards, roles &amp; logins</li>
+          <li>Inventory, invoicing &amp; CRM systems</li>
+          <li>REST APIs, webhooks and integrations</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://wa.me/971561835793?text=Hi%20Ancymol%2C%20I%27m%20interested%20in%20a%20web%20application." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- EXPERIENCE -->
 <section id="experience" style="background:var(--bg2);border-block:1px solid var(--line)">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow">// Experience</div>
+      <div class="eyebrow">Experience</div>
       <h2>Where I've worked</h2>
     </div>
     <div class="timeline">
       <div class="job rv">
         <div class="when">JAN 2026 — PRESENT</div>
-        <h4>Full Stack Developer (Ecommerce &amp; Automation)</h4>
+        <h4>Full Stack Developer — AI Automation &amp; E-commerce</h4>
         <div class="co">United Arab Agencies · Dubai, UAE</div>
         <ul>
-          <li>Built and deployed the company website solo (Next.js + Laravel).</li>
-          <li>Designed the WhatsApp &amp; Bayut lead automation platform, lead-gen CRM and AI workflows.</li>
-          <li>Developed the in-house inventory &amp; invoicing system; run iPure Herbs ecommerce.</li>
-          <li>Managed Noon &amp; Bayut listings; sourced, screened and interviewed candidates.</li>
+          <li>Built the UAA Rental Operating System: a CRM that brings Bayut, Dubizzle and website leads into one dashboard.</li>
+          <li>Developed an AI chatbot and WhatsApp automation that replies to new leads instantly and auto-follows up missed calls.</li>
+          <li>Designed and launched uaa.ae (Next.js, Laravel, Filament admin) and the Baniyas Oasis Electronics store in 6 days.</li>
+          <li>Built the iPure Herbs headless e-commerce platform and an in-house inventory &amp; invoicing system.</li>
+          <li>Report lead results to management; train staff and provide documentation and support.</li>
         </ul>
       </div>
       <div class="job rv">
@@ -498,13 +750,13 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
 <section id="skills">
   <div class="wrap">
     <div class="head rv">
-      <div class="eyebrow">// Toolkit</div>
+      <div class="eyebrow">Toolkit</div>
       <h2>What I work with</h2>
     </div>
     <div class="skills">
       <div class="sk rv"><h5>⚙️ Backend</h5><div><span>PHP</span><span>Laravel</span><span>Magento 2</span><span>Yii</span><span>Node.js</span><span>REST APIs</span><span>MySQL</span><span>Oracle</span></div></div>
-      <div class="sk rv"><h5>🎨 Frontend</h5><div><span>Next.js</span><span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span><span>WordPress</span></div></div>
-      <div class="sk rv"><h5>🤖 Automation &amp; AI</h5><div><span>n8n</span><span>WhatsApp Cloud API</span><span>AI workflows</span><span>Chatbots</span><span>Lead scoring</span><span>CRM</span></div></div>
+      <div class="sk rv"><h5>🎨 Frontend</h5><div><span>React</span><span>Next.js</span><span>JavaScript</span><span>TypeScript</span><span>HTML5</span><span>CSS3</span><span>WordPress</span></div></div>
+      <div class="sk rv"><h5>🤖 AI &amp; Automation</h5><div><span>AI chatbots</span><span>LLM workflows</span><span>n8n</span><span>WhatsApp Cloud API</span><span>Webhooks</span><span>Lead scoring</span><span>CRM</span><span>Bayut · Dubizzle</span></div></div>
       <div class="sk rv"><h5>🛒 Ecommerce</h5><div><span>Stripe</span><span>PayTabs</span><span>Tabby</span><span>Tamara</span><span>Aramex / DHL</span><span>Klaviyo</span><span>Noon</span><span>Bayut</span></div></div>
     </div>
     <p class="sub rv" style="margin-top:30px">Also: Git, Linux, Apache, Postman, Jira, Azure, cPanel, GoDaddy · Languages: English, Malayalam, Tamil, Hindi, Arabic</p>
@@ -514,9 +766,10 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="wrap rv">
-    <div class="eyebrow">// Let's talk</div>
+    <div class="eyebrow">Let's talk</div>
     <h2>Looking for a developer who can build it <em class="gold" style="font-style:normal">end to end?</em></h2>
-    <p class="sub">I'm based in Dubai and can join immediately. Happy to walk you through any of these projects live.</p>
+    <p class="sub">I'm in Dubai on a UAE employment visa and can join immediately — no notice period, no relocation. Happy to walk you through any of these projects live.</p>
+    <div class="avail" style="justify-content:center"><span class="g"><i></i>Immediate joiner</span><span><i></i>UAE Employment Visa</span><span><i></i>Dubai, UAE</span></div>
     <div class="cta">
       <a href="mailto:ancymol.softwaredev@gmail.com?subject=Opportunity%20for%20Ancymol" class="btn btn-gold">Email me</a>
       <a href="https://wa.me/971561835793" target="_blank" rel="noopener" class="btn btn-ghost">💬 WhatsApp</a>
@@ -530,12 +783,20 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
   </div>
 </section>
 
-<footer>© 2026 Ancymol KK · Full Stack &amp; Automation Developer · Dubai, UAE</footer>
+<footer>© 2026 Ancymol KK · AI Automation Engineer &amp; Full Stack Developer · Dubai, UAE</footer>
+
+<a class="wa-float" href="https://wa.me/971561835793?text=Hi%20Ancymol%2C%20I%20saw%20your%20portfolio." target="_blank" rel="noopener" aria-label="Chat with Ancymol on WhatsApp">
+  <span class="lbl">Chat with me on WhatsApp 👋</span>
+  <span class="wa-btn">
+    <svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16.04 3C8.86 3 3.03 8.82 3.03 16c0 2.3.6 4.53 1.74 6.5L3 29l6.68-1.75A12.95 12.95 0 0 0 16.04 29C23.2 29 29 23.18 29 16S23.2 3 16.04 3Zm0 23.64c-1.97 0-3.9-.53-5.58-1.53l-.4-.24-3.96 1.04 1.06-3.86-.26-.4A10.6 10.6 0 0 1 5.4 16c0-5.86 4.77-10.63 10.64-10.63 5.86 0 10.6 4.77 10.6 10.63 0 5.87-4.74 10.64-10.6 10.64Zm5.83-7.96c-.32-.16-1.9-.94-2.19-1.04-.3-.11-.5-.16-.72.16-.21.32-.82 1.04-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.6-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.72-1.73-.98-2.37-.26-.62-.53-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.3.32-1.12 1.1-1.12 2.67 0 1.57 1.15 3.1 1.31 3.3.16.22 2.26 3.45 5.47 4.84.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.1 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.14-.3-.22-.62-.38Z"/></svg>
+    <span class="n">1</span>
+  </span>
+</a>
 
 <script>
 // typing roles
 (function(){
-  var roles=["WhatsApp & AI Automation","Laravel & Next.js","Magento 2 Ecommerce","Real-Estate Lead Systems","n8n Workflows"];
+  var roles=["AI Chatbots & WhatsApp","AI Engineer","Real-Estate CRM Systems","Next.js & Laravel","E-commerce Platforms","n8n Workflows"];
   var el=document.getElementById('typed'),i=0,j=roles[0].length,del=true;
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   setTimeout(function tick(){
@@ -557,6 +818,32 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
     var h=setInterval(function(){k=Math.min(t,k+st);n.textContent=k+s;if(k>=t)clearInterval(h);},40);
   })},{threshold:.5});
   document.querySelectorAll('[data-count]').forEach(function(n){co.observe(n)});
+})();
+
+// store-style badges on project cards
+(function(){
+  document.querySelectorAll('#pgrid .card').forEach(function(c){
+    var shot=c.querySelector('.shot'),live=c.tagName==='A';
+    var r=document.createElement('span');r.className='ribbon '+(live?'live':'priv');r.textContent=live?'Live':'Private';shot.appendChild(r);
+    if(live){var q=document.createElement('span');q.className='qv';q.textContent=/dashboard/.test(c.href)?'Open live dashboard →':'Quick view →';shot.appendChild(q);}
+  });
+})();
+
+// WhatsApp label peeks once after a few seconds
+(function(){
+  var w=document.querySelector('.wa-float');
+  setTimeout(function(){w.classList.add('peek');setTimeout(function(){w.classList.remove('peek')},4500)},3500);
+})();
+
+// project filters
+(function(){
+  var bs=document.querySelectorAll('.filters button'),cs=document.querySelectorAll('#pgrid .card');
+  bs.forEach(function(b){b.addEventListener('click',function(){
+    bs.forEach(function(x){x.classList.toggle('on',x===b)});
+    var f=b.dataset.f;
+    cs.forEach(function(c){var m=f==='all'||(' '+c.dataset.cat+' ').indexOf(' '+f+' ')>-1;c.classList.toggle('hide',!m);c.classList.toggle('wide',m&&f==='all'&&c.dataset.wide==='1');c.classList.toggle('full',m&&f==='all'&&c.dataset.full==='1');if(m)c.classList.add('in');});
+  })});
+  cs.forEach(function(c){if(c.classList.contains('wide'))c.dataset.wide='1';if(c.classList.contains('full'))c.dataset.full='1'});
 })();
 
 // WhatsApp chat playback
